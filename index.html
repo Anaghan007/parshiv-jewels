@@ -15,7 +15,6 @@
   <meta name="robots" content="index,follow">
   <link rel="canonical" href="https://parshivjewels.in/">
   <meta name="theme-color" content="#0a0806">
-  <meta property="og:site_name" content="Parshiv Jewels">
   <meta property="og:type" content="website">
   <meta property="og:title" content="PARSHIV JEWELS — Timeless Elegance, Crafted to Shine">
   <meta property="og:description"
@@ -28,18 +27,14 @@
   <meta name="twitter:description" content="Certified, hallmarked jewellery. Order on WhatsApp.">
   <meta name="twitter:image"
     content="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1200&auto=format&fit=crop">
-  <link rel="icon"
-    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230a0806'/%3E%3Ctext x='32' y='44' font-family='Georgia' font-size='30' font-style='italic' text-anchor='middle' fill='%23d2a84f'%3EPJ%3C/text%3E%3C/svg%3E">
   <script type="application/ld+json">
     {"@context":"https://schema.org","@type":"JewelryStore","name":"Parshiv Jewels","url":"https://parshivjewels.in/","telephone":"+916351916996","email":"Parshivjewels.in@gmail.com","priceRange":"₹₹","address":{"@type":"PostalAddress","streetAddress":"102, Shiv Narayan House, Kansara Seri, Mahidharpura","addressLocality":"Surat","addressRegion":"Gujarat","postalCode":"395003","addressCountry":"IN"},"sameAs":["https://www.instagram.com/parshivjewels.in/","https://wa.me/916351916996"],"openingHours":"Mo-Sa 09:00-18:00"}
   </script>
 
-  <!-- perf -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preconnect" href="https://images.unsplash.com">
-  <link rel="preload" as="image"
-    href="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1200&auto=format&fit=crop">
+  <link rel="dns-prefetch" href="https://images.unsplash.com">
   <link
     href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Jost:ital,wght@0,300;0,400;0,500;0,600;1,400&display=swap"
     rel="stylesheet">
@@ -53,27 +48,12 @@
 }}}
   </script>
   <script>
-    function imgFix(el){el.onerror=null;el.src='https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1200&auto=format&fit=crop';el.classList.add('img-in');}
+    function imgFix(el){el.onerror=null;el.src='https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1200&auto=format&fit=crop';}
   </script>
-  <noscript>
-    <style>
-      body {
-        overflow: auto !important
-      }
-
-      #preloader {
-        display: none
-      }
-
-      img {
-        opacity: 1 !important
-      }
-    </style>
-  </noscript>
 
   <style type="text/tailwindcss">
     ::selection{@apply bg-gold text-night}
-  html{scroll-behavior:smooth}
+  html{scroll-behavior:smooth;color-scheme:dark}
   body{overflow-x:hidden}
   ::-webkit-scrollbar{width:9px}::-webkit-scrollbar-track{background:#0a0806}
   ::-webkit-scrollbar-thumb{background:linear-gradient(#f1dc9f,#8f6c25);border-radius:99px}
@@ -86,13 +66,9 @@
   .btn-gold{@apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-gold-deep via-gold to-gold-light font-body text-sm font-semibold uppercase tracking-[0.18em] text-night transition duration-300 hover:scale-[1.04] hover:shadow-glow active:scale-95}
   .btn-gold::after{content:'';@apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/50 to-transparent transition duration-700}
   .btn-gold:hover::after{@apply translate-x-full}
-  .btn-line{@apply inline-flex items-center justify-center gap-2 rounded-full border border-gold/40 font-body text-sm uppercase tracking-[0.18em] text-gold-light transition duration-300 hover:border-gold hover:bg-gold/10}
+  .btn-line{@apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-gold/40 font-body text-sm uppercase tracking-[0.18em] text-gold-light transition duration-300 hover:border-gold hover:bg-gold/10}
   .field{@apply w-full rounded-md border border-white/10 bg-night/60 px-4 py-3 text-sm text-ivory placeholder-sand/60 outline-none transition focus:border-gold/70 focus:ring-1 focus:ring-gold/40}
   .panel{@apply rounded-xl border border-white/5 bg-card}
-  .ornament{@apply flex items-center justify-center gap-4}
-  .ornament span:first-child{@apply h-px w-16 bg-gradient-to-r from-transparent to-gold/60}
-  .ornament span:nth-child(2){@apply h-1.5 w-1.5 rotate-45 bg-gold}
-  .ornament span:last-child{@apply h-px w-16 bg-gradient-to-l from-transparent to-gold/60}
 
   .nav-link{@apply relative py-2 text-[12px] font-medium uppercase tracking-[0.22em] text-ivory/80 transition hover:text-gold-light}
   .nav-link::after{content:'';@apply absolute bottom-0 left-1/2 h-px w-0 -translate-x-1/2 bg-gold transition-all duration-300}
@@ -113,6 +89,15 @@
   @keyframes pageIn{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
   .page-anim{animation:pageIn .55s cubic-bezier(.22,1,.36,1) both}
 
+  /* premium shine sweep */
+  .shine{position:relative;overflow:hidden}
+  .shine::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,transparent 40%,rgba(241,220,159,.16) 50%,transparent 60%);transform:translateX(-130%);transition:transform 1s ease;pointer-events:none}
+  .shine:hover::after{transform:translateX(130%)}
+  /* gold hairline on card hover */
+  .tilt{position:relative}
+  .tilt::before{content:'';position:absolute;top:0;left:0;right:0;height:1px;z-index:1;background:linear-gradient(90deg,transparent,#f1dc9f,transparent);opacity:0;transition:opacity .5s}
+  .tilt:hover::before{opacity:1}
+
   [data-reveal]{opacity:0;transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
   [data-reveal="up"]{transform:translateY(40px)}[data-reveal="left"]{transform:translateX(-46px)}
   [data-reveal="right"]{transform:translateX(46px)}[data-reveal="zoom"]{transform:scale(.92)}
@@ -132,15 +117,13 @@
   @keyframes pop{0%{transform:scale(.4)}60%{transform:scale(1.25)}100%{transform:scale(1)}}
   .pop{animation:pop .4s ease}
   .social{@apply flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-sand transition duration-300 hover:-translate-y-1 hover:border-gold hover:text-gold hover:shadow-glow}
-  .pay-badge{@apply rounded-full border border-white/10 bg-night/60 px-4 py-1.5 text-[10px] uppercase tracking-[0.2em] text-sand transition hover:border-gold/40 hover:text-gold-light}
 </style>
 </head>
 
 <body class="overflow-hidden bg-night font-body text-sand antialiased">
 
-  <!-- PRELOADER -->
-  <div id="preloader"
-    class="fixed inset-0 z-[200] flex h-[100dvh] w-screen flex-col items-center justify-center gap-6 bg-night">
+  <!-- ═══ PRELOADER (full-fill) ═══ -->
+  <div id="preloader" class="fixed inset-0 z-[200] flex flex-col items-center justify-center gap-6 bg-night">
     <div class="relative font-display text-7xl italic text-gold">
       PJ<span class="absolute -right-3 -top-1 h-2.5 w-2.5 rotate-45 bg-gold-light animate-ping"></span></div>
     <p class="text-[10px] uppercase tracking-[0.6em] text-sand">Parshiv Jewels</p>
@@ -157,7 +140,7 @@
     class="pointer-events-none fixed z-0 hidden h-[420px] w-[420px] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-20 blur-3xl lg:block"
     style="background:radial-gradient(circle,#d2a84f33,transparent 70%)"></div>
 
-  <!-- MARQUEE -->
+  <!-- ═══ MARQUEE ═══ -->
   <div class="marquee overflow-hidden border-b border-gold/15 bg-onyx py-2.5">
     <div class="marquee-track text-[10px] uppercase tracking-[0.3em] text-gold-light/80">
       <div class="flex shrink-0">
@@ -169,7 +152,7 @@
     </div>
   </div>
 
-  <!-- NAVBAR -->
+  <!-- ═══ NAVBAR ═══ -->
   <header id="navbar"
     class="sticky top-0 z-[100] border-b border-gold/10 bg-night/80 backdrop-blur-xl transition-all duration-500">
     <div class="mx-auto flex max-w-[1500px] items-center justify-between gap-6 px-5 py-4 lg:px-8">
@@ -211,9 +194,11 @@
   </header>
 
   <main class="relative">
-    <!-- ═══ HOME ═══ -->
+    <!-- ═════════ HOME ═════════ -->
     <section data-page="home" class="page">
       <div class="relative overflow-hidden">
+        <div class="pointer-events-none absolute inset-0"
+          style="background:radial-gradient(ellipse at center,transparent 55%,rgba(10,8,6,.75) 100%)"></div>
         <div class="pointer-events-none absolute -left-32 top-24 h-96 w-96 rounded-full bg-gold/10 blur-[120px] floaty">
         </div>
         <div
@@ -230,7 +215,7 @@
           <div>
             <p class="eyebrow" data-reveal="up">Parshiv Jewels · Surat</p>
             <h1
-              class="mt-7 font-display text-[12vw] font-semibold leading-[1.02] text-ivory sm:text-6xl lg:text-7xl xl:text-[84px]">
+              class="mt-7 font-display text-[13vw] font-semibold leading-[1.02] text-ivory sm:text-6xl lg:text-7xl xl:text-[84px]">
               <span class="mask-line"><span>Timeless Elegance,</span></span>
               <span class="mask-line"><span style="transition-delay:.15s">Crafted to <em class="shimmer not-italic">Shine</em></span></span>
             </h1>
@@ -247,15 +232,15 @@
                 <p class="font-display text-4xl text-gold"><span class="counter" data-count="12">0</span>+</p>
                 <p class="mt-1 text-[11px] uppercase tracking-[0.2em] text-sand/80">Years of Craft</p>
               </div>
-              <div>
+              <div class="sm:border-l sm:border-gold/10 sm:pl-6">
                 <p class="font-display text-4xl text-gold"><span class="counter" data-count="5000">0</span>+</p>
                 <p class="mt-1 text-[11px] uppercase tracking-[0.2em] text-sand/80">Happy Patrons</p>
               </div>
-              <div>
+              <div class="sm:border-l sm:border-gold/10 sm:pl-6">
                 <p class="font-display text-4xl text-gold"><span class="counter" data-count="250">0</span>+</p>
                 <p class="mt-1 text-[11px] uppercase tracking-[0.2em] text-sand/80">Signature Designs</p>
               </div>
-              <div>
+              <div class="sm:border-l sm:border-gold/10 sm:pl-6">
                 <p class="font-display text-4xl text-gold">4.9★</p>
                 <p class="mt-1 text-[11px] uppercase tracking-[0.2em] text-sand/80">Google Rating</p>
               </div>
@@ -263,6 +248,7 @@
           </div>
 
           <div class="relative mx-auto w-full max-w-md" data-reveal="zoom" style="transition-delay:.3s">
+            <div class="pointer-events-none absolute -inset-3 rounded-t-[999px] border border-gold/20"></div>
             <div
               class="arch kenburns relative mx-auto aspect-[3/4] w-full overflow-hidden rounded-t-[999px] border border-gold/30 shadow-soft">
               <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1200&auto=format&fit=crop" onerror="imgFix(this)" alt="Parshiv Jewels signature diamond necklace" fetchpriority="high" decoding="async" class="h-full w-full object-cover">
@@ -272,7 +258,7 @@
               class="absolute -left-4 top-10 floaty rounded-full border border-gold/30 bg-onyx/90 px-5 py-2.5 text-[10px] uppercase tracking-[0.25em] text-gold-light backdrop-blur">
               BIS Hallmarked</div>
             <div
-              class="absolute -right-2 bottom-24 floaty rounded-full border border-gold/30 bg-onyx/90 px-5 py-2.5 text-[10px] uppercase tracking-[0.25em] text-gold-light backdrop-blur"
+              class="absolute -right-2 bottom-16 floaty rounded-full border border-gold/30 bg-onyx/90 px-5 py-2.5 text-[10px] uppercase tracking-[0.25em] text-gold-light backdrop-blur"
               style="animation-delay:1.4s">Insured Shipping</div>
             <p class="mt-8 text-center text-[10px] uppercase tracking-[0.45em] text-gold-light/90">Parshiv Jewels
               &nbsp;◆&nbsp; Fine Craft &nbsp;◆&nbsp; Est. Surat</p>
@@ -291,22 +277,22 @@
           <a href="#/products" class="btn-line px-7 py-3">View All</a>
         </div>
         <div class="mt-12 grid auto-rows-[220px] gap-5 sm:auto-rows-[240px] sm:grid-cols-2 lg:grid-cols-4">
-          <button data-goto-cat="rings" class="group relative col-span-2 row-span-2 overflow-hidden rounded-xl border border-white/5 text-left" data-reveal="zoom">
+          <button data-goto-cat="rings" class="shine group relative col-span-2 row-span-2 overflow-hidden rounded-xl border border-white/5 text-left" data-reveal="zoom">
         <img src="https://images.unsplash.com/photo-1605100804767-0060b32a9f3a?q=80&w=1400&auto=format&fit=crop" onerror="imgFix(this)" alt="Luxury rings collection" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-[1.2s] group-hover:scale-110">
         <div class="absolute inset-0 bg-gradient-to-t from-night via-night/20 to-transparent"></div>
         <div class="absolute bottom-0 w-full p-7"><h3 class="font-display text-4xl text-ivory">Rings</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-gold-light opacity-0 transition group-hover:opacity-100">Explore →</p></div>
       </button>
-          <button data-goto-cat="necklace" class="group relative overflow-hidden rounded-xl border border-white/5 text-left" data-reveal="up">
+          <button data-goto-cat="necklace" class="shine group relative overflow-hidden rounded-xl border border-white/5 text-left" data-reveal="up">
         <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Diamond necklace collection" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-[1.2s] group-hover:scale-110">
         <div class="absolute inset-0 bg-gradient-to-t from-night via-transparent to-transparent"></div>
         <div class="absolute bottom-0 w-full p-6"><h3 class="font-display text-3xl text-ivory">Necklace</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-gold-light opacity-0 transition group-hover:opacity-100">Explore →</p></div>
       </button>
-          <button data-goto-cat="earrings" class="group relative overflow-hidden rounded-xl border border-white/5 text-left" data-reveal="up" style="transition-delay:.12s">
+          <button data-goto-cat="earrings" class="shine group relative overflow-hidden rounded-xl border border-white/5 text-left" data-reveal="up" style="transition-delay:.12s">
         <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Jhumka earrings collection" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-[1.2s] group-hover:scale-110">
         <div class="absolute inset-0 bg-gradient-to-t from-night via-transparent to-transparent"></div>
         <div class="absolute bottom-0 w-full p-6"><h3 class="font-display text-3xl text-ivory">Earrings</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-gold-light opacity-0 transition group-hover:opacity-100">Explore →</p></div>
       </button>
-          <button data-goto-cat="bracelet" class="group relative col-span-2 overflow-hidden rounded-xl border border-white/5 text-left" data-reveal="up" style="transition-delay:.2s">
+          <button data-goto-cat="bracelet" class="shine group relative col-span-2 overflow-hidden rounded-xl border border-white/5 text-left" data-reveal="up" style="transition-delay:.2s">
         <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1400&auto=format&fit=crop" onerror="imgFix(this)" alt="Diamond bracelet collection" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-[1.2s] group-hover:scale-110">
         <div class="absolute inset-0 bg-gradient-to-t from-night via-transparent to-transparent"></div>
         <div class="absolute bottom-0 w-full p-6"><h3 class="font-display text-3xl text-ivory">Bracelets</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-gold-light opacity-0 transition group-hover:opacity-100">Explore →</p></div>
@@ -321,7 +307,6 @@
             <p class="eyebrow justify-center">Curated for you</p>
             <h2 class="mt-4 font-display text-5xl font-semibold text-ivory sm:text-6xl">Featured
               <em class="shimmer">Collection</em></h2>
-            <div class="ornament mt-6"><span></span><span></span><span></span></div>
           </div>
           <div id="featuredGrid" class="mt-14 grid gap-7 sm:grid-cols-2 lg:grid-cols-3"></div>
           <div class="mt-12 text-center" data-reveal="up"><a href="#/products" class="btn-gold px-10 py-4">View All
@@ -365,36 +350,14 @@
         </div>
       </div>
 
-      <!-- VIP PRIVATE VIEWING -->
-      <div
-        class="relative overflow-hidden border-y border-gold/20 bg-gradient-to-r from-[#171106] via-[#241a09] to-[#171106] py-16">
-        <div class="sparkle" style="top:24%;left:6%"></div>
-        <div class="sparkle" style="top:60%;left:92%;animation-delay:1.4s"></div>
-        <div
-          class="mx-auto flex max-w-[1500px] flex-col items-center justify-between gap-8 px-5 text-center lg:flex-row lg:px-8 lg:text-left">
-          <div data-reveal="left">
-            <p class="eyebrow justify-center lg:justify-start">By appointment only</p>
-            <h2 class="mt-3 font-display text-4xl font-semibold text-ivory sm:text-5xl">Book a
-              <em class="text-gold">Private Viewing</em></h2>
-            <p class="mt-3 max-w-xl text-sm leading-relaxed">Experience our bridal collection in a private salon at our
-              Surat atelier — personal consultation, chai, and craftsmanship reserved exclusively for you.</p>
-          </div>
-          <div class="flex flex-wrap justify-center gap-4" data-reveal="right">
-            <a href="https://wa.me/916351916996?text=I%20would%20like%20to%20book%20a%20private%20viewing%20at%20Parshiv%20Jewels."
-              target="_blank" rel="noopener" class="btn-gold px-8 py-4">Book Appointment</a>
-            <a href="#/contact" class="btn-line px-8 py-4">Ask a Question</a>
-          </div>
-        </div>
-      </div>
-
       <!-- TESTIMONIALS -->
-      <div class="overflow-hidden bg-onyx/60 py-20">
+      <div class="overflow-hidden border-y border-white/5 bg-onyx/60 py-20">
         <p class="eyebrow justify-center" data-reveal="up">Words from our patrons</p>
         <h2 class="mt-4 text-center font-display text-5xl font-semibold text-ivory" data-reveal="up">Loved &
           <em class="text-gold">Trusted</em></h2>
         <div class="marquee mt-12 overflow-hidden">
-          <div class="marquee-track" style="--sp:45s">
-            <div class="flex shrink-0 gap-6 pr-6">
+          <div class="marquee-track gap-6 pr-6" style="--sp:45s">
+            <div class="flex shrink-0 gap-6">
               <div class="w-[320px] rounded-xl border border-gold/15 bg-card p-7">
                 <p class="text-gold">★★★★★</p>
                 <p class="mt-4 text-sm leading-relaxed text-ivory/90">"The necklace I ordered for my wedding was beyond
@@ -420,7 +383,7 @@
                 <p class="mt-5 font-display text-lg text-gold">Hitesh Patel</p>
               </div>
             </div>
-            <div class="flex shrink-0 gap-6 pr-6" aria-hidden="true">
+            <div class="flex shrink-0 gap-6" aria-hidden="true">
               <div class="w-[320px] rounded-xl border border-gold/15 bg-card p-7">
                 <p class="text-gold">★★★★★</p>
                 <p class="mt-4 text-sm leading-relaxed text-ivory/90">"The necklace I ordered for my wedding was beyond
@@ -453,7 +416,7 @@
       <!-- INSTAGRAM -->
       <div class="mx-auto max-w-[1500px] px-5 py-24 lg:px-8">
         <div
-          class="relative overflow-hidden rounded-2xl border border-gold/25 bg-gradient-to-r from-gold-deep/20 via-card to-gold-deep/20 p-10 text-center sm:p-16"
+          class="shine relative overflow-hidden rounded-2xl border border-gold/25 bg-gradient-to-r from-gold-deep/20 via-card to-gold-deep/20 p-10 text-center sm:p-16"
           data-reveal="zoom">
           <div class="sparkle" style="top:20%;left:10%"></div>
           <div class="sparkle" style="top:60%;left:88%;animation-delay:1.2s"></div>
@@ -473,7 +436,7 @@
       </div>
     </section>
 
-    <!-- ═══ SHOP ═══ -->
+    <!-- ═════════ SHOP ═════════ -->
     <section data-page="products" class="page hidden mx-auto max-w-[1500px] px-5 py-16 lg:px-8">
       <p class="eyebrow" data-reveal="up">The complete edit</p>
       <h1 class="mt-4 font-display text-6xl font-semibold text-ivory sm:text-7xl" data-reveal="up">Shop All
@@ -495,43 +458,43 @@
       </div>
     </section>
 
-    <!-- ═══ GALLERY ═══ -->
+    <!-- ═════════ GALLERY ═════════ -->
     <section data-page="gallery" class="page hidden mx-auto max-w-[1500px] px-5 py-16 lg:px-8">
       <p class="eyebrow" data-reveal="up">From our atelier</p>
       <h1 class="mt-4 font-display text-6xl font-semibold text-ivory sm:text-7xl" data-reveal="up">The
         <em class="text-gold">Gallery</em></h1>
       <div class="mt-12 columns-1 gap-6 sm:columns-2 lg:columns-3 [&>figure]:mb-6">
-        <figure class="group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
+        <figure class="shine group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
           data-reveal="zoom"><img src="https://images.unsplash.com/photo-1605100804767-0060b32a9f3a?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Gemstone rings" loading="lazy" decoding="async" class="w-full transition duration-700 group-hover:scale-105">
           <figcaption
             class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-night to-transparent p-5 font-display text-2xl text-ivory">
             Gemstone Rings</figcaption>
         </figure>
-        <figure class="group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
+        <figure class="shine group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
           data-reveal="zoom"><img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Diamond necklace" loading="lazy" decoding="async" class="w-full transition duration-700 group-hover:scale-105">
           <figcaption
             class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-night to-transparent p-5 font-display text-2xl text-ivory">
             Diamond Necklace</figcaption>
         </figure>
-        <figure class="group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
+        <figure class="shine group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
           data-reveal="zoom"><img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Heritage jhumkas" loading="lazy" decoding="async" class="w-full transition duration-700 group-hover:scale-105">
           <figcaption
             class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-night to-transparent p-5 font-display text-2xl text-ivory">
             Heritage Jhumkas</figcaption>
         </figure>
-        <figure class="group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
+        <figure class="shine group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
           data-reveal="zoom"><img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Tennis bracelet" loading="lazy" decoding="async" class="w-full transition duration-700 group-hover:scale-105">
           <figcaption
             class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-night to-transparent p-5 font-display text-2xl text-ivory">
             Tennis Bracelet</figcaption>
         </figure>
-        <figure class="group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
+        <figure class="shine group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
           data-reveal="zoom"><img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Solitaire ring" loading="lazy" decoding="async" class="w-full transition duration-700 group-hover:scale-105">
           <figcaption
             class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-night to-transparent p-5 font-display text-2xl text-ivory">
             Solitaire</figcaption>
         </figure>
-        <figure class="group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
+        <figure class="shine group relative break-inside-avoid overflow-hidden rounded-xl border border-white/5"
           data-reveal="zoom"><img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Pearl studs" loading="lazy" decoding="async" class="w-full transition duration-700 group-hover:scale-105">
           <figcaption
             class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-night to-transparent p-5 font-display text-2xl text-ivory">
@@ -540,13 +503,13 @@
       </div>
     </section>
 
-    <!-- ═══ CONTACT ═══ -->
+    <!-- ═════════ CONTACT ═════════ -->
     <section data-page="contact" class="page hidden mx-auto max-w-[1200px] px-5 py-16 lg:px-8">
       <p class="eyebrow justify-center" data-reveal="up">We'd love to hear from you</p>
       <h1 class="mt-4 text-center font-display text-6xl font-semibold text-ivory sm:text-7xl" data-reveal="up">Contact
         <em class="text-gold">Us</em></h1>
-      <div class="mt-14 grid items-stretch gap-8 lg:grid-cols-2">
-        <div class="panel flex flex-col p-9" data-reveal="left">
+      <div class="mt-14 grid items-start gap-8 lg:grid-cols-2">
+        <div class="panel h-full p-9" data-reveal="left">
           <h2 class="font-display text-3xl font-semibold text-ivory">Get in Touch</h2>
           <div class="mt-9 space-y-7">
             <a href="mailto:Parshivjewels.in@gmail.com"
@@ -566,7 +529,7 @@
             </div>
           </div>
         </div>
-        <div class="panel flex flex-col p-9" data-reveal="right">
+        <div class="panel p-9" data-reveal="right">
           <h2 class="font-display text-3xl font-semibold text-ivory">Send us a Message</h2>
           <p class="mt-2 text-xs uppercase tracking-[0.2em] text-gold">Replies directly on WhatsApp</p>
           <form id="contactForm" class="mt-7 space-y-4">
@@ -587,7 +550,7 @@
       </div>
     </section>
 
-    <!-- ═══ FAQS ═══ -->
+    <!-- ═════════ FAQS ═════════ -->
     <section data-page="faqs" class="page hidden mx-auto max-w-[1100px] px-5 py-16 lg:px-8">
       <p class="eyebrow justify-center" data-reveal="up">Need help?</p>
       <h1 class="mt-4 text-center font-display text-6xl font-semibold text-ivory sm:text-7xl" data-reveal="up">
@@ -675,15 +638,13 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- ═══ FOOTER ═══ -->
   <footer class="border-t border-gold/15 bg-onyx">
     <div class="mx-auto grid max-w-[1500px] gap-12 px-5 py-16 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
       <div>
         <h3 class="font-display text-3xl font-semibold text-gold">PARSHIV JEWELS</h3>
         <p class="mt-4 text-sm leading-relaxed">Precision-crafted luxury jewellery designed to be worn, appreciated, and
           passed down through generations.</p>
-        <form id="newsForm" class="mt-6 flex overflow-hidden rounded-full border border-gold/30 bg-night/60">
-        </form>
         <div class="mt-6 flex gap-3">
           <a href="https://www.instagram.com/parshivjewels.in/" target="_blank" rel="noopener" aria-label="Instagram"
             class="social"><svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor">
@@ -750,7 +711,7 @@
     </div>
   </footer>
 
-  <!-- CART DRAWER -->
+  <!-- ═══ CART DRAWER ═══ -->
   <div id="cartOverlay"
     class="pointer-events-none fixed inset-0 z-[105] bg-black/70 opacity-0 backdrop-blur-sm transition duration-500">
   </div>
@@ -782,44 +743,24 @@
     </div>
   </aside>
 
-  <!-- ═══ PREMIUM QUICK-VIEW MODAL ═══ -->
-  <div id="modal" class="fixed inset-0 z-[115] hidden items-center justify-center overflow-y-auto p-4" role="dialog"
-    aria-modal="true">
+  <!-- ═══ QUICK VIEW (equal boxes + reliable image) ═══ -->
+  <div id="modal" class="fixed inset-0 z-[115] hidden items-center justify-center p-4">
     <div class="absolute inset-0 bg-black/75 backdrop-blur-sm" data-close></div>
-    <div class="relative w-full max-w-4xl overflow-hidden rounded-2xl border border-gold/30 bg-onyx shadow-glow">
-      <button id="modalCloseBtn" class="absolute right-4 top-4 z-10 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-night/70 text-ivory backdrop-blur transition hover:border-gold hover:text-gold" aria-label="Close">✕</button>
-      <div class="grid max-h-[92vh] overflow-y-auto md:grid-cols-2 md:overflow-visible">
-        <div class="relative h-72 bg-card sm:h-80 md:h-[560px]">
-          <img id="modalImg" onerror="imgFix(this)" alt="Product view" decoding="async" class="absolute inset-0 h-full w-full object-cover">
-          <span id="modalBadge" class="absolute left-4 top-4 hidden rounded-full bg-gold px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-night shadow-glow"></span>
-        </div>
-        <div class="flex flex-col p-8 md:p-10">
-          <p id="modalCat" class="text-[10px] uppercase tracking-[0.35em] text-gold"></p>
-          <h3 id="modalName" class="mt-2 font-display text-4xl font-semibold text-ivory"></h3>
-          <div class="mt-3 text-sm text-gold">★★★★★ <span class="text-sand">0.0 (0)</span></div>
-          <div class="mt-4 flex items-baseline gap-3">
-            <p id="modalPrice" class="font-display text-3xl text-gold"></p>
-            <p id="modalMrp" class="text-sm text-sand/60 line-through"></p>
-            <span id="modalOff" class="text-[11px] font-medium text-green-400"></span>
-          </div>
-          <p id="modalDesc" class="mt-4 text-sm leading-relaxed"></p>
-          <div class="mt-6 flex items-center gap-4">
-            <span class="text-xs uppercase tracking-[0.2em] text-sand">Qty</span>
-            <div class="flex items-center gap-3 rounded-full border border-white/15 px-3 py-1.5">
-              <button id="mqDec" class="text-lg text-ivory transition hover:text-gold">−</button>
-              <span id="mqVal" class="w-6 text-center text-sm text-ivory">1</span>
-              <button id="mqInc" class="text-lg text-ivory transition hover:text-gold">+</button>
-            </div>
-          </div>
-          <div class="mt-6 flex gap-3">
-            <button id="modalAdd" class="btn-gold flex-1 py-3.5">Add to Cart</button>
-            <button id="modalWa" class="btn-line flex-1 py-3.5">Buy on WhatsApp</button>
-          </div>
-          <ul class="mt-6 space-y-2 text-xs text-sand">
-            <li class="flex gap-2"><span class="text-gold">◆</span>BIS hallmarked / certified stones</li>
-            <li class="flex gap-2"><span class="text-gold">◆</span>Free insured shipping & 30-day returns</li>
-            <li class="flex gap-2"><span class="text-gold">◆</span>2-year craftsmanship warranty</li>
-          </ul>
+    <div
+      class="relative grid w-full max-w-3xl overflow-hidden rounded-2xl border border-gold/30 bg-onyx shadow-glow md:grid-cols-2">
+      <div class="relative h-60 bg-night sm:h-72 md:h-[460px]">
+        <div class="absolute inset-0 flex items-center justify-center">
+          <span class="h-3 w-3 rotate-45 animate-ping bg-gold/60"></span></div>
+        <img id="modalImg" onerror="imgFix(this)" src="" alt="" decoding="async" class="relative h-full w-full object-cover">
+      </div>
+      <div class="flex flex-col p-8 md:h-[460px] md:overflow-y-auto">
+        <p id="modalCat" class="text-[10px] uppercase tracking-[0.35em] text-gold"></p>
+        <h3 id="modalName" class="mt-2 font-display text-4xl font-semibold text-ivory"></h3>
+        <div class="mt-3 text-sm text-gold">★★★★★ <span class="text-sand">0.0 (0)</span></div>
+        <p id="modalPrice" class="mt-4 font-display text-3xl text-gold"></p>
+        <p id="modalDesc" class="mt-4 text-sm leading-relaxed"></p>
+        <div class="mt-auto flex gap-3 pt-8">
+          <button id="modalAdd" class="btn-gold px-7 py-3">Add to Cart</button><button id="modalCloseBtn" class="btn-line px-7 py-3">Close</button>
         </div>
       </div>
     </div>
@@ -831,6 +772,7 @@
   <script>
     const $=(s,c=document)=>c.querySelector(s), $$=(s,c=document)=>[...c.querySelectorAll(s)];
 const WA_NUMBER='916351916996';
+const FALL='https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1200&auto=format&fit=crop';
 const IMG={ring2:'photo-1515562104634-119e0e9f2b68',neck:'photo-1599643478518-a784e5dc4c8f',ring1:'photo-1611652022419-a9419f74343d',ear:'photo-1535632066927-ab7c9ab60908',brac:'photo-1611591437281-460bfbe1220a',trio:'photo-1605100804767-0060b32a9f3a',pearl:'photo-1573408301185-9146fe634ad0',box:'photo-1617039228831-6d0937b0c162'};
 const u=(id,w=900)=>`https://images.unsplash.com/${id}?q=80&w=${w}&auto=format&fit=crop`;
 const PRODUCTS=[
@@ -858,7 +800,7 @@ const tick=setInterval(()=>{
 addEventListener('load',()=>{pageLoaded=true;});
 setTimeout(()=>{pageLoaded=true;},3500);
 
-/* image fade-in (glitch-free) */
+/* image fade-in */
 function refreshImgs(){$$('img').forEach(im=>{if(im.complete&&im.naturalWidth)im.classList.add('img-in');});}
 document.addEventListener('load',e=>{if(e.target.tagName==='IMG')e.target.classList.add('img-in');},true);
 
@@ -880,10 +822,10 @@ addEventListener('scroll',()=>{
 },{passive:true});
 $('#backTop').addEventListener('click',()=>scrollTo({top:0,behavior:'smooth'}));
 
-/* ═══ UNIFORM PRODUCT CARDS — equal-height boxes, buttons pinned bottom ═══ */
+/* ═══ PRODUCT CARD — equal-height boxes ═══ */
 function card(p,i=0){return `
 <article style="transition-delay:${(i%3)*90}ms" class="tilt group panel flex h-full flex-col overflow-hidden rounded-xl transition duration-500 hover:border-gold/50 hover:shadow-glow" data-reveal="up">
-  <div class="relative h-64 shrink-0 overflow-hidden bg-card sm:h-72">
+  <div class="relative h-72 shrink-0 overflow-hidden bg-card sm:h-80">
     <img src="${p.img}" onerror="imgFix(this)" alt="${p.name} – Parshiv Jewels" loading="lazy" decoding="async" class="h-full w-full object-cover transition duration-[1.4s] group-hover:scale-110">
     ${p.badge?`<span class="absolute left-4 top-4 rounded-full bg-gold px-3 py-1 text-[10px] font-semibold uppercase tracking-[0.2em] text-night shadow-glow">${p.badge}</span>`:''}
     <span class="absolute right-4 top-4 rounded-full border border-gold/40 bg-night/70 px-2.5 py-1 text-[10px] font-medium text-gold-light backdrop-blur">${Math.round((1-p.price/p.mrp)*100)}% OFF</span>
@@ -891,9 +833,9 @@ function card(p,i=0){return `
   </div>
   <div class="flex flex-1 flex-col p-5">
     <p class="text-[10px] uppercase tracking-[0.3em] text-gold">${p.category}</p>
-    <h3 class="mt-1.5 font-display text-2xl text-ivory">${p.name}</h3>
+    <h3 class="mt-1.5 font-display text-2xl leading-snug text-ivory">${p.name}</h3>
     <div class="mt-2 flex items-baseline gap-3"><p class="text-lg font-semibold text-gold">${inr(p.price)}</p><p class="text-xs text-sand/60 line-through">${inr(p.mrp)}</p></div>
-    <div class="mt-auto flex gap-2.5 pt-5">
+    <div class="mt-auto flex gap-2.5 pt-4">
       <button data-view="${p.id}" class="btn-line flex-1 py-2.5 text-[11px]">View Details</button>
       <button data-add="${p.id}" class="btn-gold flex-1 py-2.5 text-[11px]">Add to Cart</button>
     </div>
@@ -944,73 +886,57 @@ $('#cartItems').addEventListener('click',e=>{
  if(rm)cart.delete(+rm.dataset.rm);
  if(inc||dec||rm)renderCart();
 });
-function addToCart(id,qty=1){cart.set(id,(cart.get(id)||0)+qty);renderCart();toast(`✓ ${PRODUCTS.find(p=>p.id===id).name}${qty>1?' ×'+qty:''} added to cart`);openCart();}
-
-/* whatsapp bills */
-function billHeader(){return [`✨ *PARSHIV JEWELS* ✨`,`━━━━━━━━━━━━━━━━━━`,
-  `🧾 *ORDER BILL*  #PJ${String(Date.now()).slice(-6)}`,
-  `📅 ${new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'})}`,`━━━━━━━━━━━━━━━━━━`];}
-function billFooter(){return [`━━━━━━━━━━━━━━━━━━`,`🛡️ 100% Secure Checkout • Insured Shipping`,`📍 Mahidharpura, Surat, Gujarat`,`🙏 Thank you for choosing Parshiv Jewels!`];}
+function addToCart(id){cart.set(id,(cart.get(id)||0)+1);renderCart();toast('✓ '+PRODUCTS.find(p=>p.id===id).name+' added to cart');openCart();}
 $('#waOrderBtn').addEventListener('click',()=>{
  if(!cart.size)return toast('Your cart is empty');
- const L=billHeader();let i=1;
- cart.forEach((q,id)=>{const p=PRODUCTS.find(x=>x.id===id);L.push(`*${i++}. ${p.name}*`,`   Qty ${q} × ${inr(p.price)} = ${inr(p.price*q)}`);});
- L.push(`━━━━━━━━━━━━━━━━━━`,`Subtotal : ${inr(sub())}`,`Shipping : FREE ✅`,`Tax (18%) : ${inr(tax())}`,`*TOTAL : ${inr(tot())}*`,...billFooter());
+ const L=[`✨ *PARSHIV JEWELS* ✨`,`━━━━━━━━━━━━━━━━━━`,
+  `🧾 *ORDER BILL*  #PJ${String(Date.now()).slice(-6)}`,
+  `📅 ${new Date().toLocaleString('en-IN',{dateStyle:'medium',timeStyle:'short'})}`,`━━━━━━━━━━━━━━━━━━`];
+ let i=1;cart.forEach((q,id)=>{const p=PRODUCTS.find(x=>x.id===id);L.push(`*${i++}. ${p.name}*`,`   Qty ${q} × ${inr(p.price)} = ${inr(p.price*q)}`);});
+ L.push(`━━━━━━━━━━━━━━━━━━`,`Subtotal : ${inr(sub())}`,`Shipping : FREE ✅`,`Tax (18%) : ${inr(tax())}`,`*TOTAL : ${inr(tot())}*`,`━━━━━━━━━━━━━━━━━━`,`🛡️ 100% Secure Checkout • Insured Shipping`,`📍 Mahidharpura, Surat, Gujarat`,`🙏 Thank you for choosing Parshiv Jewels!`);
  open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(L.join('\n'))}`,'_blank');
  toast('Opening WhatsApp with your order bill…');
 });
 $('#continueShopping').addEventListener('click',()=>{closeCart();location.hash='#/products';});
 
-/* ═══ QUICK VIEW — fixed image loading + qty ═══ */
-let currentId=null,modalQty=1;
-function openModal(id){const p=PRODUCTS.find(x=>x.id===id);currentId=id;modalQty=1;$('#mqVal').textContent=1;
- const im=$('#modalImg');im.classList.remove('img-in');im.src=p.img;
- if(im.complete&&im.naturalWidth)im.classList.add('img-in');   /* cached-image fix */
- $('#modalCat').textContent=p.category;$('#modalName').textContent=p.name;
- $('#modalPrice').textContent=inr(p.price);$('#modalMrp').textContent=inr(p.mrp);
- $('#modalOff').textContent=Math.round((1-p.price/p.mrp)*100)+'% OFF';
- $('#modalDesc').textContent=p.desc;
- const bd=$('#modalBadge');if(p.badge){bd.textContent=p.badge;bd.classList.remove('hidden');}else bd.classList.add('hidden');
+/* ═══ QUICK VIEW — image always loads (cached & same-src safe) ═══ */
+let currentId=null;
+function setModalImg(src){const im=$('#modalImg');
+  im.classList.remove('img-in');
+  im.onerror=function(){this.onerror=null;this.src=FALL;};
+  im.src=src;
+  if(im.complete&&im.naturalWidth)requestAnimationFrame(()=>im.classList.add('img-in'));
+}
+function openModal(id){const p=PRODUCTS.find(x=>x.id===id);currentId=id;
+ setModalImg(p.img);
+ $('#modalCat').textContent=p.category;$('#modalName').textContent=p.name;$('#modalPrice').textContent=inr(p.price);$('#modalDesc').textContent=p.desc;
  const m=$('#modal');m.classList.remove('hidden');m.classList.add('flex');document.body.classList.add('overflow-hidden');}
 function closeModal(){$('#modal').classList.add('hidden');$('#modal').classList.remove('flex');document.body.classList.remove('overflow-hidden');}
-$('#mqInc').addEventListener('click',()=>{modalQty=Math.min(9,modalQty+1);$('#mqVal').textContent=modalQty;});
-$('#mqDec').addEventListener('click',()=>{modalQty=Math.max(1,modalQty-1);$('#mqVal').textContent=modalQty;});
-$('#modalAdd').addEventListener('click',()=>{const q=modalQty;closeModal();addToCart(currentId,q);});
-$('#modalWa').addEventListener('click',()=>{const p=PRODUCTS.find(x=>x.id===currentId);
- const L=billHeader(),amt=p.price*modalQty,t=amt*1.18;
- L.push(`*1. ${p.name}*`,`   Qty ${modalQty} × ${inr(p.price)} = ${inr(amt)}`,`━━━━━━━━━━━━━━━━━━`,
-  `Subtotal : ${inr(amt)}`,`Shipping : FREE ✅`,`Tax (18%) : ${inr(amt*0.18)}`,`*TOTAL : ${inr(t)}*`,...billFooter());
- open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(L.join('\n'))}`,'_blank');});
 $('#modalCloseBtn').addEventListener('click',closeModal);$$('[data-close]').forEach(el=>el.addEventListener('click',closeModal));
+$('#modalAdd').addEventListener('click',()=>{closeModal();addToCart(currentId);});
 addEventListener('keydown',e=>{if(e.key==='Escape'){closeModal();closeCart();}});
 document.addEventListener('click',e=>{const a=e.target.closest('[data-add]'),v=e.target.closest('[data-view]');if(a)addToCart(+a.dataset.add);if(v)openModal(+v.dataset.view);});
 
-/* contact + newsletter → whatsapp / toast */
+/* contact → whatsapp */
 $('#contactForm').addEventListener('submit',e=>{e.preventDefault();
  const m=[`📩 *NEW ENQUIRY — PARSHIV JEWELS*`,`━━━━━━━━━━━━━━━━━━`,`👤 *Name:* ${$('#cfName').value}`,`📧 *Email:* ${$('#cfEmail').value}`,`📞 *Phone:* ${$('#cfPhone').value||'—'}`,`📌 *Subject:* ${$('#cfSubject').value}`,`📝 *Message:* ${$('#cfMsg').value}`,`━━━━━━━━━━━━━━━━━━`,`Sent from parshivjewels.in`].join('\n');
  open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(m)}`,'_blank');toast('✓ Opening WhatsApp…');e.target.reset();});
-$('#newsForm').addEventListener('submit',e=>{e.preventDefault();toast('✨ Welcome to the Parshiv inner circle');e.target.reset();});
 
 /* faq */
 $$('.faq-item').forEach(it=>$('.faq-q',it).addEventListener('click',()=>{const o=it.classList.contains('open');$$('.faq-item.open').forEach(x=>x.classList.remove('open'));if(!o)it.classList.add('open');}));
 
-/* tilt (only after reveal, desktop) */
-if(matchMedia('(pointer:fine)').matches){
- document.addEventListener('mousemove',e=>{const t=e.target.closest('.tilt');if(!t||!t.classList.contains('revealed'))return;const r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;t.style.transform=`perspective(900px) rotateY(${x*5}deg) rotateX(${-y*5}deg)`;},{passive:true});
- document.addEventListener('mouseover',e=>{if(!e.target.closest('.tilt'))$$('.tilt').forEach(t=>t.style.transform='');});
-}
+/* tilt */
+if(matchMedia('(pointer:fine)').matches){document.addEventListener('mousemove',e=>{const t=e.target.closest('.tilt');if(!t)return;const r=t.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;t.style.transform=`perspective(900px) rotateY(${x*6}deg) rotateX(${-y*6}deg)`;},{passive:true});document.addEventListener('mouseover',e=>{if(!e.target.closest('.tilt'))$$('.tilt').forEach(t=>t.style.transform='');});}
 
 $('#mobileMenuBtn').addEventListener('click',()=>$('#mobileMenu').classList.toggle('hidden'));
 
-/* router + per-page SEO titles */
+/* router — instant scroll on page change */
 const routes=['home','products','gallery','contact','faqs'];
-const titles={home:'PARSHIV JEWELS — Timeless Elegance, Crafted to Shine | Luxury Jewellery Surat',products:'Shop All Products — Parshiv Jewels',gallery:'Gallery — Parshiv Jewels',contact:'Contact Us — Parshiv Jewels',faqs:'FAQs — Parshiv Jewels'};
 function navigate(){const h=location.hash.replace(/^#\/?/,''),r=routes.includes(h)?h:'home';
  $$('.page').forEach(p=>p.classList.toggle('hidden',p.dataset.page!==r));
  $$('[data-nav]').forEach(a=>a.classList.toggle('active',a.dataset.nav===r));
- document.title=titles[r];
  const pg=$(`.page[data-page="${r}"]`);pg.classList.remove('page-anim');void pg.offsetWidth;pg.classList.add('page-anim');
- $('#mobileMenu').classList.add('hidden');scrollTo(0,0);observe();refreshImgs();}
+ $('#mobileMenu').classList.add('hidden');scrollTo({top:0,behavior:'instant'});observe();refreshImgs();}
 addEventListener('hashchange',navigate);
 
 navigate();applyShop();renderCart();observe();refreshImgs();
