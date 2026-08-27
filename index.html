@@ -4,13 +4,12 @@
 <head>
   <!-- ═══════════════════════════════════════════════════════════
      PARSHIV JEWELS — EMERALD ATELIER · Silver Manufacturing House
-     1.SEO 2.FONTS 3.STYLES 4.LAYOUT 5.PAGES 6.COMPONENTS 7.ENGINE
-     [FIXED: Image visibility, Section reveal fail-safes, Preloader lock]
+     [ULTRA-PREMIUM UPDATE: No black filters, faster hero, cinematic animations]
 ═══════════════════════════════════════════════════════════ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PARSHIV JEWELS — 925 Sterling Silver Jewellery Manufacturer, Surat</title>
-  <meta name="description" content="Parshiv Jewels — silver jewellery manufacturers from Surat. Handcrafted 925 sterling silver rings, necklaces, earrings & bracelets. Global insured delivery, size & pincode check, order on WhatsApp.">
+  <meta name="description" content="Parshiv Jewels — silver jewellery manufacturers from Surat. Handcrafted 925 sterling silver rings, necklaces, earrings & bracelets. Global insured delivery.">
   <meta name="keywords" content="silver jewellery manufacturer Surat, 925 sterling silver, silver rings, silver necklace, silver jhumka, Parshiv Jewels">
   <meta name="author" content="Parshiv Jewels">
   <meta name="robots" content="index,follow">
@@ -49,119 +48,134 @@
             jade: '#6fd0a8'
           },
           fontFamily: { display: ['Fraunces', 'serif'], body: ['Manrope', 'sans-serif'] },
-          boxShadow: { glow: '0 14px 44px rgba(211,184,120,.22)', soft: '0 24px 60px rgba(0,0,0,.45)', lift: '0 10px 30px rgba(0,0,0,.5)' }
+          boxShadow: { 
+            glow: '0 14px 44px rgba(211,184,120,.25)', 
+            soft: '0 24px 60px rgba(0,0,0,.5)', 
+            lift: '0 20px 40px rgba(0,0,0,.6)' 
+          }
         }
       }
     }
   </script>
   <script>
-    // ROBUST IMAGE FALLBACK
     function imgFix(el) {
       el.onerror = null;
       el.src = 'https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1200&auto=format&fit=crop';
       el.classList.add('img-in');
-      el.style.opacity = '1'; // Hard override to prevent invisible images
+      el.style.opacity = '1';
     }
   </script>
 
   <style type="text/tailwindcss">
     ::selection { @apply bg-champ text-pine }
     html { scroll-behavior: smooth; color-scheme: dark; font-size: 17px }
-    body { overflow-x: hidden }
-    ::-webkit-scrollbar { width: 9px }
+    body { overflow-x: hidden; background: radial-gradient(ellipse at top, #0d3029 0%, #071f1a 60%); }
+    ::-webkit-scrollbar { width: 8px }
     ::-webkit-scrollbar-track { background: #071f1a }
     ::-webkit-scrollbar-thumb { background: linear-gradient(#efe0b6, #9c7c3c); border-radius: 99px }
     .no-bar::-webkit-scrollbar { display: none }
     .no-bar { scrollbar-width: none }
 
-    /* CRITICAL FIX: Default opacity to 1 to prevent permanent invisible images */
-    img { opacity: 1 !important; transition: opacity 0.6s ease; }
+    /* PREMIUM IMAGE FIX: No black/grayscale filter. Bright, vibrant, and luxurious. */
+    .silv { 
+      filter: brightness(1.08) contrast(1.05) saturate(1.15); 
+      transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+    }
+    .group:hover .silv { 
+      filter: brightness(1.15) contrast(1.1) saturate(1.25); 
+      transform: scale(1.05); 
+    }
     .img-in { opacity: 1 !important; }
-    .silv { filter: grayscale(1) brightness(1.12) contrast(1.06) }
 
     .eyebrow { @apply flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.42em] text-champ }
     .eyebrow::before { content: ''; @apply h-px w-10 bg-champ/50 }
     .it { @apply font-display italic text-champ }
 
-    .btn-gold { @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-champ-deep via-champ to-champ-light font-body text-sm font-bold uppercase tracking-[0.18em] text-pine transition duration-300 hover:scale-[1.04] hover:shadow-glow active:scale-95 }
-    .btn-gold::after { content: ''; @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/60 to-transparent transition duration-700 }
+    .btn-gold { @apply relative inline-flex items-center justify-center gap-2 overflow-hidden rounded-full bg-gradient-to-r from-champ-deep via-champ to-champ-light font-body text-sm font-bold uppercase tracking-[0.18em] text-pine transition-all duration-500 hover:scale-[1.04] hover:shadow-glow active:scale-95 }
+    .btn-gold::after { content: ''; @apply absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-white/70 to-transparent transition duration-700 }
     .btn-gold:hover::after { @apply translate-x-full }
-    .btn-line { @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-champ/40 text-sm font-semibold uppercase tracking-[0.18em] text-champ-light transition duration-300 hover:border-champ hover:bg-champ/10 }
-    .field { @apply w-full rounded-full border border-white/10 bg-pine/70 px-5 py-3 text-[15px] text-ivory placeholder-mist/50 outline-none transition focus:border-champ/70 focus:ring-1 focus:ring-champ/40 }
-    .panel { @apply rounded-2xl border border-white/5 bg-card }
+    
+    .btn-line { @apply inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-full border border-champ/40 text-sm font-semibold uppercase tracking-[0.18em] text-champ-light transition-all duration-500 hover:border-champ hover:bg-champ/10 hover:shadow-glow }
+    
+    .field { @apply w-full rounded-full border border-white/10 bg-pine/70 px-5 py-3 text-[15px] text-ivory placeholder-mist/50 outline-none transition-all duration-300 focus:border-champ/70 focus:ring-1 focus:ring-champ/40 }
+    .panel { @apply rounded-2xl border border-white/5 bg-card/80 backdrop-blur-sm }
 
-    .nav-link { @apply relative text-[12px] font-semibold uppercase tracking-[0.24em] text-ivory/75 transition hover:text-champ-light }
+    .nav-link { @apply relative text-[12px] font-semibold uppercase tracking-[0.24em] text-ivory/75 transition-all duration-300 hover:text-champ-light }
     .nav-link sup { @apply mr-1 font-display italic text-champ }
-    .nav-link::after { content: ''; @apply absolute -bottom-1.5 left-0 h-px w-0 bg-champ transition-all duration-300 }
+    .nav-link::after { content: ''; @apply absolute -bottom-1.5 left-0 h-px w-0 bg-champ transition-all duration-500 ease-out }
     .nav-link:hover::after, .nav-link.active::after { @apply w-full }
     .nav-link.active { @apply text-champ }
 
-    .chip { @apply rounded-full border border-white/15 px-5 py-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-mist transition duration-300 hover:border-champ hover:text-champ-light }
-    .chip-on { @apply border-champ bg-champ/10 text-champ-light }
-    .size-chip { @apply rounded-full border border-white/15 px-4 py-1.5 text-sm text-ivory/80 transition duration-200 hover:border-champ }
-    .size-on { @apply border-champ bg-champ text-pine font-bold }
+    .chip { @apply rounded-full border border-white/15 px-5 py-2 text-[12px] font-semibold uppercase tracking-[0.2em] text-mist transition-all duration-300 hover:border-champ hover:text-champ-light hover:bg-champ/5 }
+    .chip-on { @apply border-champ bg-champ/10 text-champ-light shadow-glow }
+    .size-chip { @apply rounded-full border border-white/15 px-4 py-1.5 text-sm text-ivory/80 transition-all duration-300 hover:border-champ hover:text-champ-light }
+    .size-on { @apply border-champ bg-champ text-pine font-bold shadow-glow }
 
     .csel .cs-menu { @apply absolute left-0 right-0 z-40 mt-2 hidden origin-top overflow-hidden rounded-2xl border border-champ/25 bg-moss/95 shadow-lift backdrop-blur-xl }
     .csel.open .cs-menu { @apply block }
     @keyframes menuIn { from { opacity: 0; transform: translateY(-8px) scale(.98) } to { opacity: 1; transform: none } }
-    .csel.open .cs-menu { animation: menuIn .22s ease both }
+    .csel.open .cs-menu { animation: menuIn .25s cubic-bezier(0.25, 0.46, 0.45, 0.94) both }
     .csel.open .cs-chev { @apply rotate-180 }
     .cs-opt { @apply block w-full px-5 py-3 text-left text-[15px] text-ivory/80 transition hover:bg-champ/10 hover:text-champ-light }
 
     @keyframes shimmer { to { background-position: 200% center } }
-    .shimmer { background: linear-gradient(110deg, #9c7c3c 20%, #fdf6dd 40%, #d3b878 55%, #9c7c3c 80%); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shimmer 5s linear infinite }
+    .shimmer { background: linear-gradient(110deg, #9c7c3c 20%, #fdf6dd 40%, #d3b878 55%, #9c7c3c 80%); background-size: 200% auto; -webkit-background-clip: text; background-clip: text; color: transparent; animation: shimmer 4s linear infinite }
     
     @keyframes marquee { to { transform: translateX(-50%) } }
     .marquee-track { display: flex; width: max-content; animation: marquee var(--sp, 28s) linear infinite; will-change: transform; transform: translateZ(0); }
     .marquee:hover .marquee-track { animation-play-state: paused }
     
     .outline-txt { @apply text-transparent [-webkit-text-stroke:1px_rgba(211,184,120,.30)] }
-    @keyframes kb { 0%, 100% { transform: scale(1) } 50% { transform: scale(1.08) translateY(-8px) } }
-    .kenburns img { animation: kb 16s ease-in-out infinite }
-    @keyframes floaty { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-10px) } }
-    .floaty { animation: floaty 5s ease-in-out infinite }
-    @keyframes wordIn { from { opacity: 0; transform: translateY(70%) rotateX(50deg) } to { opacity: 1; transform: none } }
-    .word-anim { display: inline-block; animation: wordIn .55s cubic-bezier(.22, 1, .36, 1) both }
-    @keyframes pageIn { from { opacity: 0; transform: translateY(16px) } to { opacity: 1; transform: none } }
-    .page-anim { animation: pageIn .5s cubic-bezier(.22, 1, .36, 1) both }
+    
+    @keyframes floaty { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-12px) } }
+    .floaty { animation: floaty 6s ease-in-out infinite }
+    
+    @keyframes wordIn { from { opacity: 0; transform: translateY(100%) rotateX(40deg) } to { opacity: 1; transform: none } }
+    .word-anim { display: inline-block; animation: wordIn .6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both }
+    
+    @keyframes elegantFadeIn { from { opacity: 0; transform: translateY(40px) scale(0.98); filter: blur(4px); } to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
+    .page-anim { animation: elegantFadeIn .7s cubic-bezier(0.25, 0.46, 0.45, 0.94) both }
 
     .shine { position: relative; overflow: hidden }
-    .shine::after { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, transparent 40%, rgba(239,224,182,.14) 50%, transparent 60%); transform: translateX(-130%); transition: transform 1s ease; pointer-events: none }
+    .shine::after { content: ''; position: absolute; inset: 0; background: linear-gradient(105deg, transparent 40%, rgba(239,224,182,.15) 50%, transparent 60%); transform: translateX(-130%); transition: transform 1.2s ease; pointer-events: none }
     .shine:hover::after { transform: translateX(130%) }
 
-    /* CRITICAL FIX: Reveal animations with fail-safe visibility */
-    [data-reveal] { transition: opacity .8s ease, transform .8s cubic-bezier(.22,1,.36,1), clip-path .9s cubic-bezier(.22,1,.36,1); }
-    [data-reveal="up"] { transform: translateY(42px); opacity: 0; }
-    [data-reveal="curtain"] { clip-path: inset(0 0 100% 0); transform: translateY(24px); opacity: 0; }
-    [data-reveal="left"] { transform: translateX(-46px); opacity: 0; }
-    [data-reveal="right"] { transform: translateX(46px); opacity: 0; }
+    /* CINEMATIC REVEAL ANIMATIONS */
+    [data-reveal] { transition: opacity 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.9s cubic-bezier(0.25, 0.46, 0.45, 0.94), clip-path 1s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    [data-reveal="up"] { transform: translateY(50px); opacity: 0; }
+    [data-reveal="curtain"] { clip-path: inset(0 0 100% 0); transform: translateY(30px); opacity: 0; }
+    [data-reveal="left"] { transform: translateX(-60px); opacity: 0; }
+    [data-reveal="right"] { transform: translateX(60px); opacity: 0; }
     [data-reveal].revealed { opacity: 1 !important; transform: none !important; clip-path: inset(0 0 0% 0) !important; }
 
-    .f-link { @apply relative transition duration-300 }
-    .f-link::before { content: '◆'; @apply absolute left-0 top-1/2 -translate-y-1/2 text-[9px] text-champ opacity-0 transition duration-300 }
+    .f-link { @apply relative transition-all duration-300 }
+    .f-link::before { content: '◆'; @apply absolute left-0 top-1/2 -translate-y-1/2 text-[9px] text-champ opacity-0 transition-all duration-300 }
     .f-link:hover { @apply pl-4 text-champ-light }
     .f-link:hover::before { @apply opacity-100 }
 
-    .faq-item .acc-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .45s ease }
+    .faq-item .acc-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows .5s cubic-bezier(0.25, 0.46, 0.45, 0.94) }
     .faq-item.open .acc-body { grid-template-rows: 1fr }
-    .faq-item.open { @apply border-champ/40 }
+    .faq-item.open { @apply border-champ/40 bg-champ/5 }
     .faq-item.open .faq-v { transform: rotate(0) }
     .faq-item.open .faq-q { @apply text-champ-light }
 
-    #toast { @apply pointer-events-none fixed bottom-8 left-1/2 z-[120] -translate-x-1/2 translate-y-5 rounded-full border border-champ/50 bg-moss/95 px-7 py-3 text-[15px] tracking-wide text-champ-light opacity-0 shadow-glow backdrop-blur transition-all duration-300 }
+    #toast { @apply pointer-events-none fixed bottom-8 left-1/2 z-[120] -translate-x-1/2 translate-y-5 rounded-full border border-champ/50 bg-moss/95 px-7 py-3 text-[15px] tracking-wide text-champ-light opacity-0 shadow-glow backdrop-blur transition-all duration-500 }
     #toast.show { @apply translate-y-0 opacity-100 }
+    
     @keyframes pop { 0% { transform: scale(.4) } 60% { transform: scale(1.25) } 100% { transform: scale(1) } }
-    .pop { animation: pop .4s ease }
-    .social { @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/15 text-mist transition duration-300 hover:-translate-y-1 hover:border-champ hover:text-champ hover:shadow-glow }
+    .pop { animation: pop .4s cubic-bezier(0.25, 0.46, 0.45, 0.94) }
+    
+    .social { @apply flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-white/15 text-mist transition-all duration-500 hover:-translate-y-1 hover:border-champ hover:text-champ hover:shadow-glow hover:bg-champ/10 }
+    
     #cursorRing { @apply pointer-events-none fixed z-[140] hidden h-9 w-9 -translate-x-1/2 -translate-y-1/2 rounded-full border border-champ/50 transition-[width,height] duration-300 lg:block }
     #cursorDot { @apply pointer-events-none fixed z-[140] hidden h-1.5 w-1.5 -translate-x-1/2 -translate-y-1/2 rounded-full bg-champ-light lg:block }
   </style>
 </head>
 
-<body class="overflow-hidden bg-pine font-body text-mist antialiased">
+<body class="overflow-hidden font-body text-mist antialiased">
 
-  <!-- 4. LAYOUT -->
-  <div id="preloader" class="fixed inset-0 z-[200] flex flex-col items-center justify-center gap-6 bg-pine transition-opacity duration-500">
+  <!-- PRELOADER -->
+  <div id="preloader" class="fixed inset-0 z-[200] flex flex-col items-center justify-center gap-6 bg-pine transition-opacity duration-700">
     <div class="relative font-display text-6xl italic text-champ">
       PJ<span class="absolute -right-3 -top-1 h-2 w-2 rotate-45 bg-champ-light animate-ping"></span>
     </div>
@@ -176,8 +190,8 @@
   <div id="cursorDot"></div>
   <div id="progress" class="fixed left-0 top-0 z-[101] h-[2px] w-0 bg-gradient-to-r from-champ-deep via-champ to-champ-light"></div>
 
-  <!-- ticker -->
-  <div class="marquee overflow-hidden border-b border-champ/15 bg-moss py-2">
+  <!-- TICKER -->
+  <div class="marquee overflow-hidden border-b border-champ/15 bg-moss/50 py-2">
     <div class="marquee-track text-[11px] uppercase tracking-[0.3em] text-mist">
       <div class="flex shrink-0">
         <span class="px-6">◆ 925 Sterling Silver</span><span class="px-6">◆ BIS Hallmarked</span><span class="px-6">◆ Global Insured Delivery</span><span class="px-6">◆ 30-Day Returns</span><span class="px-6">◆ WhatsApp +91 63519 16996</span>
@@ -188,12 +202,12 @@
     </div>
   </div>
 
-  <!-- header -->
-  <header id="navbar" class="sticky top-0 z-[100] border-b border-champ/10 bg-pine/85 backdrop-blur-md transition-shadow duration-500">
+  <!-- HEADER -->
+  <header id="navbar" class="sticky top-0 z-[100] border-b border-champ/10 bg-pine/80 backdrop-blur-md transition-all duration-500">
     <div class="mx-auto flex max-w-[1500px] items-center justify-between gap-6 px-5 py-4 lg:px-8">
       <a href="#/" class="group flex items-center gap-3">
-        <span class="flex h-11 w-11 rotate-45 items-center justify-center border border-champ/50 transition group-hover:rotate-[135deg] duration-500">
-          <svg class="h-5 w-5 -rotate-45 transition group-hover:rotate-[-135deg] duration-500 text-champ" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M7 3h10l4 6-9 12L3 9z"/><path d="M3 9h18M7 3l2 6 3 12 3-12 2-6"/></svg>
+        <span class="flex h-11 w-11 rotate-45 items-center justify-center border border-champ/50 transition-all duration-700 group-hover:rotate-[135deg] group-hover:shadow-glow">
+          <svg class="h-5 w-5 -rotate-45 transition-all duration-700 group-hover:rotate-[-135deg] text-champ" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"><path d="M7 3h10l4 6-9 12L3 9z"/><path d="M3 9h18M7 3l2 6 3 12 3-12 2-6"/></svg>
         </span>
         <span class="leading-tight">
           <span class="block font-display text-xl font-semibold tracking-[0.14em] text-ivory">PARSHIV</span>
@@ -209,7 +223,7 @@
         <a href="#/faqs" data-nav="faqs" class="nav-link"><sup>06</sup>FAQs</a>
       </nav>
       <div class="flex items-center gap-3">
-        <button id="cartBtn" class="relative flex h-11 w-11 items-center justify-center rounded-full border border-champ/40 text-champ transition hover:bg-champ hover:text-pine" aria-label="Open cart">
+        <button id="cartBtn" class="relative flex h-11 w-11 items-center justify-center rounded-full border border-champ/40 text-champ transition-all duration-500 hover:bg-champ hover:text-pine hover:shadow-glow" aria-label="Open cart">
           <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"/></svg>
           <span id="cartCount" class="absolute -right-1 -top-1 hidden h-5 min-w-[20px] items-center justify-center rounded-full bg-champ px-1 text-[11px] font-bold text-pine">0</span>
         </button>
@@ -266,14 +280,14 @@
             </div>
           </div>
 
-          <!-- product stage slides -->
+          <!-- product stage slides (CIRCULAR TIMER REMOVED) -->
           <div class="relative mx-auto w-full max-w-[400px]" data-reveal="curtain" style="transition-delay:.25s">
-            <div class="pointer-events-none absolute -inset-4 rounded-[2rem] border border-champ/25"></div>
+            <div class="pointer-events-none absolute -inset-4 rounded-[2rem] border border-champ/25 shadow-glow"></div>
             <div class="relative overflow-hidden rounded-[2rem] border border-champ/30 bg-moss shadow-soft">
               <div class="relative h-[380px] sm:h-[430px]">
-                <img id="hsImg" onerror="imgFix(this)" src="" alt="Featured silver jewellery" decoding="async" fetchpriority="high" class="silv h-full w-full object-cover transition duration-700">
-                <span id="hsBadge" class="absolute left-4 top-4 rounded-full bg-champ px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-pine">Featured</span>
-                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine via-pine/60 to-transparent p-5">
+                <img id="hsImg" onerror="imgFix(this)" src="" alt="Featured silver jewellery" decoding="async" fetchpriority="high" class="silv h-full w-full object-cover transition-all duration-700">
+                <span id="hsBadge" class="absolute left-4 top-4 rounded-full bg-champ px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-pine shadow-glow">Featured</span>
+                <div class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine/90 via-pine/50 to-transparent p-5">
                   <p id="hsName" class="font-display text-2xl text-ivory"></p>
                   <div class="mt-1 flex items-center justify-between">
                     <p id="hsPrice" class="text-lg font-bold text-champ"></p>
@@ -283,19 +297,15 @@
                     </div>
                   </div>
                 </div>
-                <div class="absolute right-4 top-4 h-10 w-10 rounded-full border border-champ/30">
-                  <div id="hsBar" class="h-10 w-10 rounded-full" style="background:conic-gradient(#d3b878 0turn,transparent 0turn)"></div>
-                  <div class="absolute inset-1 rounded-full bg-moss"></div>
-                </div>
               </div>
             </div>
             <div class="mt-4 flex items-center justify-between">
               <div id="hsDots" class="flex gap-2"></div>
               <div class="flex gap-2">
-                <button id="hsPrev" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-champ transition hover:border-champ" aria-label="Previous">
+                <button id="hsPrev" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-champ transition-all duration-300 hover:border-champ hover:bg-champ/10 hover:shadow-glow" aria-label="Previous">
                   <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
                 </button>
-                <button id="hsNext" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-champ transition hover:border-champ" aria-label="Next">
+                <button id="hsNext" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-champ transition-all duration-300 hover:border-champ hover:bg-champ/10 hover:shadow-glow" aria-label="Next">
                   <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
                 </button>
               </div>
@@ -305,7 +315,7 @@
       </div>
 
       <!-- big outline marquee -->
-      <div class="marquee overflow-hidden border-y border-champ/10 bg-moss/50 py-6">
+      <div class="marquee overflow-hidden border-y border-champ/10 bg-moss/30 py-6">
         <div class="marquee-track font-display text-5xl font-bold sm:text-6xl" style="--sp:36s">
           <div class="flex shrink-0 items-center gap-10 pr-10">
             <span class="outline-txt">HANDCRAFTED</span><span class="text-champ">◆</span><span class="text-ivory/90">925 STERLING</span><span class="text-champ">◆</span><span class="outline-txt">HALLMARKED</span><span class="text-champ">◆</span><span class="text-ivory/90">MADE IN SURAT</span><span class="text-champ">◆</span>
@@ -324,54 +334,54 @@
             <h2 class="mt-4 font-display text-4xl font-semibold text-ivory sm:text-5xl">Browse <em class="it">Collections</em></h2>
           </div>
           <div class="flex gap-2">
-            <button id="colPrev" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-champ transition hover:border-champ" aria-label="Scroll left">
+            <button id="colPrev" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-champ transition-all duration-300 hover:border-champ hover:bg-champ/10 hover:shadow-glow" aria-label="Scroll left">
               <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 18-6-6 6-6"/></svg>
             </button>
-            <button id="colNext" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-champ transition hover:border-champ" aria-label="Scroll right">
+            <button id="colNext" class="flex h-11 w-11 items-center justify-center rounded-full border border-white/15 text-champ transition-all duration-300 hover:border-champ hover:bg-champ/10 hover:shadow-glow" aria-label="Scroll right">
               <svg class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>
             </button>
           </div>
         </div>
         <div id="colTrack" class="no-bar mt-10 flex snap-x snap-mandatory gap-6 overflow-x-auto pb-4" data-reveal="curtain">
           <button data-goto-cat="rings" class="shine group relative h-[420px] w-[300px] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 text-left sm:w-[400px]">
-            <img src="https://images.unsplash.com/photo-1605100804767-0060b32a9f3a?q=80&w=1000&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver rings" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-[1.2s] group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-pine via-transparent to-transparent"></div>
-            <div class="absolute bottom-0 w-full p-6"><p class="font-display text-6xl text-champ/40">01</p><h3 class="font-display text-3xl text-ivory">Rings</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-champ-light opacity-0 transition group-hover:opacity-100">Slide in →</p></div>
+            <img src="https://images.unsplash.com/photo-1605100804767-0060b32a9f3a?q=80&w=1000&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver rings" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-pine/90 via-pine/30 to-transparent"></div>
+            <div class="absolute bottom-0 w-full p-6"><p class="font-display text-6xl text-champ/40">01</p><h3 class="font-display text-3xl text-ivory">Rings</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-champ-light opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:pl-2">Explore Collection →</p></div>
           </button>
           <button data-goto-cat="necklace" class="shine group relative h-[420px] w-[300px] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 text-left sm:w-[400px]">
-            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver necklace" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-[1.2s] group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-pine via-transparent to-transparent"></div>
-            <div class="absolute bottom-0 w-full p-6"><p class="font-display text-6xl text-champ/40">02</p><h3 class="font-display text-3xl text-ivory">Necklace</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-champ-light opacity-0 transition group-hover:opacity-100">Slide in →</p></div>
+            <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=1000&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver necklace" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-pine/90 via-pine/30 to-transparent"></div>
+            <div class="absolute bottom-0 w-full p-6"><p class="font-display text-6xl text-champ/40">02</p><h3 class="font-display text-3xl text-ivory">Necklace</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-champ-light opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:pl-2">Explore Collection →</p></div>
           </button>
           <button data-goto-cat="earrings" class="shine group relative h-[420px] w-[300px] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 text-left sm:w-[400px]">
-            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver earrings" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-[1.2s] group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-pine via-transparent to-transparent"></div>
-            <div class="absolute bottom-0 w-full p-6"><p class="font-display text-6xl text-champ/40">03</p><h3 class="font-display text-3xl text-ivory">Earrings</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-champ-light opacity-0 transition group-hover:opacity-100">Slide in →</p></div>
+            <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=1000&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver earrings" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-pine/90 via-pine/30 to-transparent"></div>
+            <div class="absolute bottom-0 w-full p-6"><p class="font-display text-6xl text-champ/40">03</p><h3 class="font-display text-3xl text-ivory">Earrings</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-champ-light opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:pl-2">Explore Collection →</p></div>
           </button>
           <button data-goto-cat="bracelet" class="shine group relative h-[420px] w-[300px] shrink-0 snap-start overflow-hidden rounded-2xl border border-white/10 text-left sm:w-[400px]">
-            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1000&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver bracelets" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-[1.2s] group-hover:scale-110">
-            <div class="absolute inset-0 bg-gradient-to-t from-pine via-transparent to-transparent"></div>
-            <div class="absolute bottom-0 w-full p-6"><p class="font-display text-6xl text-champ/40">04</p><h3 class="font-display text-3xl text-ivory">Bracelets</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-champ-light opacity-0 transition group-hover:opacity-100">Slide in →</p></div>
+            <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=1000&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver bracelets" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-pine/90 via-pine/30 to-transparent"></div>
+            <div class="absolute bottom-0 w-full p-6"><p class="font-display text-6xl text-champ/40">04</p><h3 class="font-display text-3xl text-ivory">Bracelets</h3><p class="mt-1 text-xs uppercase tracking-[0.3em] text-champ-light opacity-0 transition-all duration-500 group-hover:opacity-100 group-hover:pl-2">Explore Collection →</p></div>
           </button>
         </div>
       </div>
 
       <!-- SILVER STANDARD -->
-      <div class="border-y border-white/5 bg-moss/50 py-24">
+      <div class="border-y border-white/5 bg-moss/30 py-24">
         <div class="mx-auto grid max-w-[1300px] items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
           <div class="kenburns relative mx-auto h-[380px] w-full max-w-md overflow-hidden rounded-2xl border border-champ/30 shadow-soft sm:h-[460px]" data-reveal="curtain">
             <img src="https://images.unsplash.com/photo-1617039228831-6d0937b0c162?q=80&w=1000&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver jewellery in keepsake box" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
-            <div class="floaty absolute bottom-5 left-5 rounded-full border border-champ/40 bg-pine/90 px-5 py-2 text-[10px] uppercase tracking-[0.25em] text-champ-light">925 Sterling Silver</div>
+            <div class="floaty absolute bottom-5 left-5 rounded-full border border-champ/40 bg-pine/90 px-5 py-2 text-[10px] uppercase tracking-[0.25em] text-champ-light backdrop-blur-sm">925 Sterling Silver</div>
           </div>
           <div data-reveal="right">
             <p class="eyebrow">The silver standard</p>
             <h2 class="mt-4 font-display text-4xl font-semibold text-ivory sm:text-5xl">Why our silver is <em class="it">different</em></h2>
             <p class="mt-6 text-[16px] leading-relaxed">Every Parshiv jewel is poured in <strong class="text-champ-light">925 sterling silver</strong> — 92.5% pure silver alloyed for strength, then rhodium-finished to resist tarnish and glow like white gold.</p>
             <ul class="mt-7 space-y-4 text-[15px]">
-              <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>BIS-hallmarked metal with maker's code & purity stamp</li>
-              <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>Nickel-free, skin-safe rhodium finish</li>
-              <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>Anti-tarnish e-coat for everyday wear</li>
-              <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>Lifetime re-polish & re-plating at our atelier</li>
+              <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>BIS-hallmarked metal with maker's code & purity stamp</li>
+              <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>Nickel-free, skin-safe rhodium finish</li>
+              <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>Anti-tarnish e-coat for everyday wear</li>
+              <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>Lifetime re-polish & re-plating at our atelier</li>
             </ul>
             <a href="#/guides" data-goto-guide="cert" class="btn-line mt-8 px-7 py-3">Read Certification Guide</a>
           </div>
@@ -397,22 +407,22 @@
           <h2 class="mt-4 font-display text-4xl font-semibold text-ivory sm:text-5xl">The <em class="it">Atelier</em> Process</h2>
         </div>
         <div class="mt-14">
-          <article class="sticky mb-8 rounded-2xl border border-champ/20 bg-card p-8 shadow-soft sm:p-10" style="top:110px" data-reveal="up">
+          <article class="sticky mb-8 rounded-2xl border border-champ/20 bg-card/90 backdrop-blur-sm p-8 shadow-soft sm:p-10" style="top:110px" data-reveal="up">
             <p class="font-display text-5xl text-champ/40">01</p>
             <h3 class="mt-3 font-display text-2xl text-ivory">Sketch & CAD</h3>
             <p class="mt-3 max-w-2xl text-[15px] leading-relaxed">Each design begins as a graphite sketch in our Surat studio, translated into a precision 3D CAD model so proportions are perfect before a single gram is melted.</p>
           </article>
-          <article class="sticky mb-8 rounded-2xl border border-champ/25 bg-moss p-8 shadow-soft sm:p-10" style="top:126px" data-reveal="up">
+          <article class="sticky mb-8 rounded-2xl border border-champ/25 bg-moss/90 backdrop-blur-sm p-8 shadow-soft sm:p-10" style="top:126px" data-reveal="up">
             <p class="font-display text-5xl text-champ/40">02</p>
             <h3 class="mt-3 font-display text-2xl text-ivory">Cast in 925</h3>
             <p class="mt-3 max-w-2xl text-[15px] leading-relaxed">We cast in-house using certified 925 sterling grain — vacuum-cast for a denser, brighter, longer-lasting finish than mass-produced silver.</p>
           </article>
-          <article class="sticky mb-8 rounded-2xl border border-champ/30 bg-card p-8 shadow-soft sm:p-10" style="top:142px" data-reveal="up">
+          <article class="sticky mb-8 rounded-2xl border border-champ/30 bg-card/90 backdrop-blur-sm p-8 shadow-soft sm:p-10" style="top:142px" data-reveal="up">
             <p class="font-display text-5xl text-champ/40">03</p>
             <h3 class="mt-3 font-display text-2xl text-ivory">Hand Setting</h3>
             <p class="mt-3 max-w-2xl text-[15px] leading-relaxed">Stones are set under 10× magnification by karigars trained over decades — every prong checked, every gallery smoothed.</p>
           </article>
-          <article class="sticky rounded-2xl border border-champ/40 bg-moss p-8 shadow-soft sm:p-10" style="top:158px" data-reveal="up">
+          <article class="sticky rounded-2xl border border-champ/40 bg-moss/90 backdrop-blur-sm p-8 shadow-soft sm:p-10" style="top:158px" data-reveal="up">
             <p class="font-display text-5xl text-champ/40">04</p>
             <h3 class="mt-3 font-display text-2xl text-ivory">Hallmark & Dispatch</h3>
             <p class="mt-3 max-w-2xl text-[15px] leading-relaxed">Each piece is BIS hallmarked, rhodium-finished, quality-audited and dispatched in tamper-proof packaging with insured global delivery.</p>
@@ -421,7 +431,7 @@
       </div>
 
       <!-- GUIDES TEASER -->
-      <div class="border-y border-white/5 bg-moss/50 py-24">
+      <div class="border-y border-white/5 bg-moss/30 py-24">
         <div class="mx-auto max-w-[1500px] px-5 lg:px-8">
           <div class="flex flex-wrap items-end justify-between gap-6" data-reveal="up">
             <div>
@@ -431,23 +441,23 @@
             <a href="#/guides" class="btn-line px-7 py-3">All Guides</a>
           </div>
           <div class="mt-12 grid gap-6 md:grid-cols-3">
-            <a href="#/guides" data-goto-guide="care" class="panel shine group p-8 transition hover:-translate-y-1 hover:border-champ/50" data-reveal="up">
+            <a href="#/guides" data-goto-guide="care" class="panel shine group p-8 transition-all duration-500 hover:-translate-y-2 hover:border-champ/50 hover:shadow-glow" data-reveal="up">
               <p class="font-display text-4xl text-champ/40">✦</p>
               <h3 class="mt-4 font-display text-2xl text-ivory">Jewellery Care Guide</h3>
               <p class="mt-3 text-[15px]">Keep your silver glowing for decades — do's, don'ts & storage rituals.</p>
-              <p class="mt-5 text-xs uppercase tracking-[0.3em] text-champ group-hover:pl-2 transition">Read →</p>
+              <p class="mt-5 text-xs uppercase tracking-[0.3em] text-champ group-hover:pl-2 transition-all">Read →</p>
             </a>
-            <a href="#/guides" data-goto-guide="size" class="panel shine group p-8 transition hover:-translate-y-1 hover:border-champ/50" data-reveal="up" style="transition-delay:.12s">
+            <a href="#/guides" data-goto-guide="size" class="panel shine group p-8 transition-all duration-500 hover:-translate-y-2 hover:border-champ/50 hover:shadow-glow" data-reveal="up" style="transition-delay:.12s">
               <p class="font-display text-4xl text-champ/40">✦</p>
               <h3 class="mt-4 font-display text-2xl text-ivory">Size Guide</h3>
               <p class="mt-3 text-[15px]">Ring, necklace & bangle charts with at-home measuring tricks.</p>
-              <p class="mt-5 text-xs uppercase tracking-[0.3em] text-champ group-hover:pl-2 transition">Read →</p>
+              <p class="mt-5 text-xs uppercase tracking-[0.3em] text-champ group-hover:pl-2 transition-all">Read →</p>
             </a>
-            <a href="#/guides" data-goto-guide="diamond" class="panel shine group p-8 transition hover:-translate-y-1 hover:border-champ/50" data-reveal="up" style="transition-delay:.24s">
+            <a href="#/guides" data-goto-guide="diamond" class="panel shine group p-8 transition-all duration-500 hover:-translate-y-2 hover:border-champ/50 hover:shadow-glow" data-reveal="up" style="transition-delay:.24s">
               <p class="font-display text-4xl text-champ/40">✦</p>
               <h3 class="mt-4 font-display text-2xl text-ivory">Diamond Guide</h3>
               <p class="mt-3 text-[15px]">The 4 Cs decoded — cut, colour, clarity and carat, simply explained.</p>
-              <p class="mt-5 text-xs uppercase tracking-[0.3em] text-champ group-hover:pl-2 transition">Read →</p>
+              <p class="mt-5 text-xs uppercase tracking-[0.3em] text-champ group-hover:pl-2 transition-all">Read →</p>
             </a>
           </div>
         </div>
@@ -460,34 +470,34 @@
         <div class="marquee mt-12 overflow-hidden">
           <div class="marquee-track gap-6 pr-6" style="--sp:45s">
             <div class="flex shrink-0 gap-6">
-              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card p-7">
+              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card/80 p-7 backdrop-blur-sm">
                 <p class="text-champ">★★★★★</p>
                 <p class="mt-4 text-[15px] leading-relaxed text-ivory/90">"The silver necklace I ordered for my wedding was beyond imagination — it looks white-gold! WhatsApp ordering was so easy."</p>
                 <p class="mt-5 font-display text-lg text-champ">Meera Patel</p>
               </div>
-              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card p-7">
+              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card/80 p-7 backdrop-blur-sm">
                 <p class="text-champ">★★★★★</p>
                 <p class="mt-4 text-[15px] leading-relaxed text-ivory/90">"Genuine 925 with hallmark stamp. Pincode check told me delivery in 3 days and it arrived in 2. Superb packaging."</p>
                 <p class="mt-5 font-display text-lg text-champ">Rajesh Shah</p>
               </div>
-              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card p-7">
+              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card/80 p-7 backdrop-blur-sm">
                 <p class="text-champ">★★★★★</p>
                 <p class="mt-4 text-[15px] leading-relaxed text-ivory/90">"Their jhumkas are heirloom quality. I used the size guide and the fit is perfect. Wonderful experience."</p>
                 <p class="mt-5 font-display text-lg text-champ">Anjali Desai</p>
               </div>
             </div>
             <div class="flex shrink-0 gap-6" aria-hidden="true">
-              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card p-7">
+              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card/80 p-7 backdrop-blur-sm">
                 <p class="text-champ">★★★★★</p>
                 <p class="mt-4 text-[15px] leading-relaxed text-ivory/90">"The silver necklace I ordered for my wedding was beyond imagination — it looks white-gold! WhatsApp ordering was so easy."</p>
                 <p class="mt-5 font-display text-lg text-champ">Meera Patel</p>
               </div>
-              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card p-7">
+              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card/80 p-7 backdrop-blur-sm">
                 <p class="text-champ">★★★★★</p>
                 <p class="mt-4 text-[15px] leading-relaxed text-ivory/90">"Genuine 925 with hallmark stamp. Pincode check told me delivery in 3 days and it arrived in 2. Superb packaging."</p>
                 <p class="mt-5 font-display text-lg text-champ">Rajesh Shah</p>
               </div>
-              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card p-7">
+              <div class="w-[330px] rounded-2xl border border-champ/15 bg-card/80 p-7 backdrop-blur-sm">
                 <p class="text-champ">★★★★★</p>
                 <p class="mt-4 text-[15px] leading-relaxed text-ivory/90">"Their jhumkas are heirloom quality. I used the size guide and the fit is perfect. Wonderful experience."</p>
                 <p class="mt-5 font-display text-lg text-champ">Anjali Desai</p>
@@ -499,7 +509,7 @@
 
       <!-- INSTAGRAM -->
       <div class="mx-auto max-w-[1500px] px-5 pb-24 lg:px-8">
-        <div class="shine relative overflow-hidden rounded-2xl border border-champ/25 bg-card p-10 text-center shadow-soft sm:p-14" data-reveal="curtain">
+        <div class="shine relative overflow-hidden rounded-2xl border border-champ/25 bg-card/80 p-10 text-center shadow-soft backdrop-blur-sm sm:p-14" data-reveal="curtain">
           <p class="eyebrow justify-center">Follow our sparkle</p>
           <h2 class="mt-4 font-display text-4xl font-semibold text-ivory sm:text-5xl">@parshivjewels.in</h2>
           <p class="mx-auto mt-4 max-w-xl text-[15px]">Daily drops of fresh silver casts, bespoke rings and behind-the-scenes atelier films.</p>
@@ -519,7 +529,7 @@
         <button class="chip" data-chip="bracelet">Bracelets</button>
       </div>
       <div class="panel mt-6 flex flex-wrap items-center gap-4 p-5" data-reveal="up">
-        <span class="flex items-center gap-2 font-display text-lg text-ivory"><span class="h-2 w-2 rotate-45 bg-champ"></span>Refine</span>
+        <span class="flex items-center gap-2 font-display text-lg text-ivory"><span class="h-2 w-2 rotate-45 bg-champ shadow-glow"></span>Refine</span>
         <input id="minPrice" type="number" min="0" placeholder="₹ Min" class="field w-28">
         <input id="maxPrice" type="number" min="0" placeholder="₹ Max" class="field w-28">
         <div class="csel relative w-56" id="sortSelect" data-value="featured">
@@ -542,28 +552,28 @@
       <h1 class="mt-4 font-display text-5xl font-semibold text-ivory sm:text-6xl" data-reveal="up">The <em class="it">Gallery</em></h1>
       <div class="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
         <figure class="shine group relative h-60 overflow-hidden rounded-2xl border border-white/10 sm:h-64" data-reveal="curtain">
-          <img src="https://images.unsplash.com/photo-1605100804767-0060b32a9f3a?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver gemstone rings" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-700 group-hover:scale-108">
-          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine to-transparent p-5 font-display text-xl text-ivory">Gemstone Rings</figcaption>
+          <img src="https://images.unsplash.com/photo-1605100804767-0060b32a9f3a?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver gemstone rings" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine/90 to-transparent p-5 font-display text-xl text-ivory">Gemstone Rings</figcaption>
         </figure>
         <figure class="shine group relative h-60 overflow-hidden rounded-2xl border border-white/10 sm:h-64" data-reveal="curtain" style="transition-delay:.08s">
-          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver diamond necklace" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-700 group-hover:scale-108">
-          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine to-transparent p-5 font-display text-xl text-ivory">Diamond Necklace</figcaption>
+          <img src="https://images.unsplash.com/photo-1599643478518-a784e5dc4c8f?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver diamond necklace" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine/90 to-transparent p-5 font-display text-xl text-ivory">Diamond Necklace</figcaption>
         </figure>
         <figure class="shine group relative h-60 overflow-hidden rounded-2xl border border-white/10 sm:h-64" data-reveal="curtain" style="transition-delay:.16s">
-          <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver jhumka earrings" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-700 group-hover:scale-108">
-          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine to-transparent p-5 font-display text-xl text-ivory">Heritage Jhumkas</figcaption>
+          <img src="https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver jhumka earrings" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine/90 to-transparent p-5 font-display text-xl text-ivory">Heritage Jhumkas</figcaption>
         </figure>
         <figure class="shine group relative h-60 overflow-hidden rounded-2xl border border-white/10 sm:h-64" data-reveal="curtain">
-          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver tennis bracelet" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-700 group-hover:scale-108">
-          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine to-transparent p-5 font-display text-xl text-ivory">Tennis Bracelet</figcaption>
+          <img src="https://images.unsplash.com/photo-1611591437281-460bfbe1220a?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver tennis bracelet" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine/90 to-transparent p-5 font-display text-xl text-ivory">Tennis Bracelet</figcaption>
         </figure>
         <figure class="shine group relative h-60 overflow-hidden rounded-2xl border border-white/10 sm:h-64" data-reveal="curtain" style="transition-delay:.08s">
-          <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver solitaire ring" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-700 group-hover:scale-108">
-          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine to-transparent p-5 font-display text-xl text-ivory">Solitaire</figcaption>
+          <img src="https://images.unsplash.com/photo-1611652022419-a9419f74343d?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver solitaire ring" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine/90 to-transparent p-5 font-display text-xl text-ivory">Solitaire</figcaption>
         </figure>
         <figure class="shine group relative h-60 overflow-hidden rounded-2xl border border-white/10 sm:h-64" data-reveal="curtain" style="transition-delay:.16s">
-          <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver pearl studs" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-700 group-hover:scale-108">
-          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine to-transparent p-5 font-display text-xl text-ivory">Pearl Studs</figcaption>
+          <img src="https://images.unsplash.com/photo-1573408301185-9146fe634ad0?q=80&w=900&auto=format&fit=crop" onerror="imgFix(this)" alt="Silver pearl studs" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+          <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-pine/90 to-transparent p-5 font-display text-xl text-ivory">Pearl Studs</figcaption>
         </figure>
       </div>
     </section>
@@ -584,10 +594,10 @@
         <h2 class="font-display text-3xl text-ivory">Diamond & Jewellery Guide</h2>
         <p class="mt-4 text-[15px] leading-relaxed">Buying fine jewellery is emotional — and it should also be informed. Start by deciding the <em class="it">occasion</em> (daily, festive, bridal), then the <em class="it">metal</em> (our pieces are 925 sterling silver with rhodium finish), and only then the stone. Check hallmarks before price, ask for the stone's origin, and always buy from a maker who offers lifetime service.</p>
         <ul class="mt-6 grid gap-3 text-[15px] sm:grid-cols-2">
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>Decide occasion → metal → stone, in that order</li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>Verify hallmark & maker's code first</li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>Ask for stone certificate on pieces above ₹2,000</li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>Prefer makers with lifetime re-polish/service</li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>Decide occasion → metal → stone, in that order</li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>Verify hallmark & maker's code first</li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>Ask for stone certificate on pieces above ₹2,000</li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>Prefer makers with lifetime re-polish/service</li>
         </ul>
       </div>
       <div data-panel="care" class="gpanel panel mt-8 hidden p-8 sm:p-10">
@@ -664,10 +674,10 @@
         <h2 class="font-display text-3xl text-ivory">Certification Guide</h2>
         <p class="mt-4 text-[15px] leading-relaxed">Every Parshiv jewel carries the <strong class="text-champ-light">BIS hallmark</strong> — four marks: the BIS logo, purity <strong class="text-champ-light">925</strong>, our maker's code, and the assay centre mark. Gem-set pieces above ₹2,000 include a stone certificate. Verify any hallmark via the BIS CARE app using the HUID number on your tag.</p>
         <ul class="mt-6 space-y-3 text-[15px]">
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>BIS logo + 925 purity stamp on every piece</li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>Maker's code & assay centre mark</li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>HUID number verifiable on BIS CARE app</li>
-          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ"></span>Stone certificates (IGI/GIL) on gem pieces</li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>BIS logo + 925 purity stamp on every piece</li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>Maker's code & assay centre mark</li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>HUID number verifiable on BIS CARE app</li>
+          <li class="flex gap-3"><span class="mt-1 h-2 w-2 shrink-0 rotate-45 bg-champ shadow-glow"></span>Stone certificates (IGI/GIL) on gem pieces</li>
         </ul>
       </div>
     </section>
@@ -749,8 +759,8 @@
   </main>
 
   <!-- FOOTER -->
-  <footer class="border-t border-champ/15 bg-moss">
-    <p class="select-none overflow-hidden whitespace-nowrap px-5 pt-10 text-center font-display text-[13vw] font-bold leading-none" aria-hidden="true">PARSHIV</p>
+  <footer class="border-t border-champ/15 bg-moss/80 backdrop-blur-sm">
+    <p class="select-none overflow-hidden whitespace-nowrap px-5 pt-10 text-center font-display text-[13vw] font-bold leading-none text-champ/10" aria-hidden="true">PARSHIV</p>
     <div class="mx-auto grid max-w-[1500px] gap-12 px-5 py-14 sm:grid-cols-2 lg:grid-cols-4 lg:px-8">
       <div>
         <h3 class="font-display text-2xl font-semibold text-champ">PARSHIV JEWELS</h3>
@@ -808,10 +818,10 @@
 
   <!-- 6. COMPONENTS -->
   <div id="cartOverlay" class="pointer-events-none fixed inset-0 z-[105] bg-black/70 opacity-0 backdrop-blur-sm transition duration-300"></div>
-  <aside id="cartDrawer" class="fixed right-0 top-0 z-[110] flex h-full w-full max-w-md translate-x-full flex-col border-l border-champ/25 bg-moss shadow-soft transition-transform duration-300 ease-out" aria-label="Shopping cart">
+  <aside id="cartDrawer" class="fixed right-0 top-0 z-[110] flex h-full w-full max-w-md translate-x-full flex-col border-l border-champ/25 bg-moss shadow-soft transition-transform duration-500 ease-out" aria-label="Shopping cart">
     <div class="flex items-center justify-between border-b border-champ/15 px-6 py-5">
       <h2 class="font-display text-2xl text-ivory">Your Cart <span id="cartHeaderCount" class="text-champ">(0)</span></h2>
-      <button id="cartClose" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-ivory transition hover:border-champ hover:text-champ" aria-label="Close cart">✕</button>
+      <button id="cartClose" class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-ivory transition-all duration-300 hover:border-champ hover:text-champ hover:bg-champ/10" aria-label="Close cart">✕</button>
     </div>
     <div id="cartItems" class="flex-1 overflow-y-auto px-6 py-5"></div>
     <div id="cartFooter" class="border-t border-champ/15 px-6 py-6">
@@ -831,12 +841,12 @@
   <div id="modal" class="fixed inset-0 z-[115] hidden items-center justify-center p-4" role="dialog" aria-modal="true">
     <div class="absolute inset-0 bg-black/80 backdrop-blur-sm" data-close></div>
     <div class="relative max-h-[92vh] w-full max-w-4xl overflow-y-auto rounded-2xl border border-champ/30 bg-moss shadow-glow no-bar" style="animation:menuIn .3s ease both">
-      <button id="mClose" class="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-pine/70 text-ivory transition hover:border-champ hover:text-champ" aria-label="Close">✕</button>
+      <button id="mClose" class="absolute right-4 top-4 z-20 flex h-10 w-10 items-center justify-center rounded-full border border-white/15 bg-pine/70 text-ivory transition-all duration-300 hover:border-champ hover:text-champ hover:bg-champ/10" aria-label="Close">✕</button>
       <div class="grid md:grid-cols-2">
         <div class="p-5">
           <div class="relative h-[320px] overflow-hidden rounded-xl border border-champ/25 bg-pine sm:h-[400px]">
-            <img id="mImg" onerror="imgFix(this)" src="" alt="" decoding="async" class="silv h-full w-full object-cover transition duration-500">
-            <span id="mLabel" class="absolute bottom-3 left-3 rounded-full bg-pine/80 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-champ-light">Front</span>
+            <img id="mImg" onerror="imgFix(this)" src="" alt="" decoding="async" class="silv h-full w-full object-cover transition-all duration-500">
+            <span id="mLabel" class="absolute bottom-3 left-3 rounded-full bg-pine/80 px-3 py-1 text-[10px] uppercase tracking-[0.25em] text-champ-light backdrop-blur-sm">Front</span>
           </div>
           <div id="mThumbs" class="mt-3 grid grid-cols-5 gap-2"></div>
         </div>
@@ -867,9 +877,9 @@
           </div>
           <div class="mt-6 flex items-center gap-4">
             <div class="flex items-center gap-3 rounded-full border border-white/15 px-3 py-2">
-              <button id="qtyDec" class="h-7 w-7 rounded-full border border-white/15 text-ivory hover:border-champ hover:text-champ">−</button>
+              <button id="qtyDec" class="h-7 w-7 rounded-full border border-white/15 text-ivory hover:border-champ hover:text-champ hover:bg-champ/10">−</button>
               <span id="qtyVal" class="w-6 text-center text-ivory">1</span>
-              <button id="qtyInc" class="h-7 w-7 rounded-full border border-white/15 text-ivory hover:border-champ hover:text-champ">+</button>
+              <button id="qtyInc" class="h-7 w-7 rounded-full border border-white/15 text-ivory hover:border-champ hover:text-champ hover:bg-champ/10">+</button>
             </div>
             <button id="mAdd" class="btn-gold flex-1 py-3.5">Add to Cart</button>
           </div>
@@ -879,7 +889,7 @@
     </div>
   </div>
 
-  <button id="backTop" class="fixed bottom-6 right-6 z-[95] flex h-12 w-12 translate-y-20 items-center justify-center rounded-full border border-champ/50 bg-moss text-champ opacity-0 transition duration-500 hover:bg-champ hover:text-pine" aria-label="Back to top">↑</button>
+  <button id="backTop" class="fixed bottom-6 right-6 z-[95] flex h-12 w-12 translate-y-20 items-center justify-center rounded-full border border-champ/50 bg-moss text-champ opacity-0 transition-all duration-500 hover:bg-champ hover:text-pine hover:shadow-glow" aria-label="Back to top">↑</button>
   <div id="toast" role="status"><span id="toastMsg"></span></div>
 
   <!-- 7. ENGINE -->
@@ -899,7 +909,6 @@
     
     const SIZES = { rings: ['8', '10', '12', '14', '16', '18', '20'], necklace: ['16"', '18"', '20"', '22"'], earrings: ['Free Size'], bracelet: ['6.5"', '7"', '7.5"', '8"'] };
     
-    // PROFESSIONAL PRODUCT DATA (Fixed typos like "nackless", "ring 2")
     const PRODUCTS = [
       { id: 1, name: 'Heritage Blue Topaz Ring', price: 1222, mrp: 1599, category: 'rings', badge: 'Bestseller', imgs: [P.a, P.b], desc: 'Heritage-inspired sterling ring crowned with a celestial blue topaz and pavé detailing.' },
       { id: 2, name: 'Rose-Glow Diamond Necklace', price: 2000, mrp: 2800, category: 'necklace', badge: 'Bridal', imgs: [P.c, P.h], desc: 'Rose-glow diamond necklace in silver with cascading teardrop brilliance.' },
@@ -948,18 +957,15 @@
         finishPreloader();
       }
     }, 100);
-    
-    // CRITICAL: Force preloader to finish in 2.5 seconds max to prevent stuck screen
     setTimeout(finishPreloader, 2500);
 
     /* IMAGES FAIL-SAFE */
     function refreshImgs() {
       $$('img').forEach(im => {
         im.classList.add('img-in');
-        im.style.opacity = '1'; // Hard override to prevent invisible images
+        im.style.opacity = '1';
       });
     }
-    // Force images visible after short delays to prevent "photos not showing" glitch
     setTimeout(refreshImgs, 500);
     setTimeout(refreshImgs, 1500);
 
@@ -974,8 +980,6 @@
     function observe() {
       $$('[data-reveal]:not(.revealed)').forEach(el => io.observe(el));
     }
-    
-    // CRITICAL: Force all sections visible after 1.2 seconds if observer fails
     setTimeout(() => {
       $$('[data-reveal]:not(.revealed)').forEach(el => el.classList.add('revealed'));
     }, 1200);
@@ -1027,10 +1031,9 @@
         b.classList.toggle('translate-y-20', !on);
       }
     }, { passive: true });
-    
     $('#backTop').addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
 
-    /* HERO STAGE */
+    /* HERO STAGE (CIRCULAR TIMER REMOVED, FASTER INTERVAL) */
     const HS = PRODUCTS.slice(0, 4);
     let hi = 0, hTimer;
     function hsGo(i) {
@@ -1039,21 +1042,19 @@
       const im = $('#hsImg');
       im.onerror = function() { this.onerror = null; this.src = FALL; this.classList.add('img-in'); };
       im.src = u(p.imgs[0], 1000);
-      im.classList.add('img-in'); // Force visible
+      im.classList.add('img-in');
       $('#hsName').textContent = p.name;
       $('#hsPrice').textContent = inr(p.price);
       $('#hsBadge').textContent = p.badge || 'Featured';
-      $('#hsDots').innerHTML = HS.map((_, k) => `<button data-hs="${k}" class="h-2 rounded-full transition-all duration-300 ${k === hi ? 'w-7 bg-champ' : 'w-2 bg-white/25'}" aria-label="Slide ${k + 1}"></button>`).join('');
+      $('#hsDots').innerHTML = HS.map((_, k) => `<button data-hs="${k}" class="h-2 rounded-full transition-all duration-300 ${k === hi ? 'w-7 bg-champ shadow-glow' : 'w-2 bg-white/25'}" aria-label="Slide ${k + 1}"></button>`).join('');
       hAuto();
     }
     function hAuto() {
       clearInterval(hTimer);
-      let t0 = Date.now();
+      // CHANGED: Faster transition time (2.5 seconds instead of 4 seconds)
       hTimer = setInterval(() => {
-        const p = (Date.now() - t0) / 4000;
-        $('#hsBar').style.background = `conic-gradient(#d3b878 ${p}turn,transparent ${p}turn)`;
-        if (p >= 1) { hsGo(hi + 1); }
-      }, 50);
+        hsGo(hi + 1);
+      }, 2500); 
     }
     $('#hsNext').addEventListener('click', () => hsGo(hi + 1));
     $('#hsPrev').addEventListener('click', () => hsGo(hi - 1));
@@ -1086,12 +1087,12 @@
     /* CARD GENERATOR */
     function card(p, i = 0) {
       return `
-      <article style="transition-delay:${(i % 3) * 90}ms" class="group panel flex h-full flex-col overflow-hidden rounded-2xl transition duration-500 hover:-translate-y-1 hover:border-champ/50 hover:shadow-glow" data-reveal="up">
+      <article style="transition-delay:${(i % 3) * 90}ms" class="group panel flex h-full flex-col overflow-hidden rounded-2xl transition-all duration-500 hover:-translate-y-2 hover:border-champ/50 hover:shadow-glow" data-reveal="up">
         <div class="relative h-72 shrink-0 cursor-pointer overflow-hidden bg-pine sm:h-80" data-view="${p.id}">
-          <img src="${u(p.imgs[0])}" onerror="imgFix(this)" alt="${p.name} – silver jewellery" loading="lazy" decoding="async" class="silv h-full w-full object-cover transition duration-[1.4s] group-hover:scale-110">
-          ${p.badge ? `<span class="absolute left-4 top-4 rounded-full bg-champ px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-pine">${p.badge}</span>` : ''}
-          <span class="absolute right-4 top-4 rounded-full border border-champ/40 bg-pine/70 px-2.5 py-1 text-[11px] text-champ-light backdrop-blur">${Math.round((1 - p.price / p.mrp) * 100)}% OFF</span>
-          <span class="absolute bottom-3 right-3 rounded-full bg-pine/80 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-champ-light">5 Views ◆</span>
+          <img src="${u(p.imgs[0])}" onerror="imgFix(this)" alt="${p.name} – silver jewellery" loading="lazy" decoding="async" class="silv h-full w-full object-cover">
+          ${p.badge ? `<span class="absolute left-4 top-4 rounded-full bg-champ px-3 py-1 text-[10px] font-bold uppercase tracking-[0.2em] text-pine shadow-glow">${p.badge}</span>` : ''}
+          <span class="absolute right-4 top-4 rounded-full border border-champ/40 bg-pine/70 px-2.5 py-1 text-[11px] text-champ-light backdrop-blur-sm">${Math.round((1 - p.price / p.mrp) * 100)}% OFF</span>
+          <span class="absolute bottom-3 right-3 rounded-full bg-pine/80 px-3 py-1 text-[10px] uppercase tracking-[0.2em] text-champ-light backdrop-blur-sm">5 Views ◆</span>
         </div>
         <div class="flex flex-1 flex-col p-5">
           <p class="text-[11px] uppercase tracking-[0.3em] text-champ">Silver · ${p.category}</p>
@@ -1123,7 +1124,6 @@
           <div class="mt-8 grid gap-7 sm:grid-cols-2 xl:grid-cols-3">${it.map((p, i) => card(p, i)).join('')}</div>
         </div>`;
       }).join('') || '<p class="mt-16 py-16 text-center">No products match your filters.</p>';
-      
       observe();
       refreshImgs();
     }
@@ -1179,7 +1179,7 @@
       im.style.transform = V[sel.view].t;
       im.classList.add('img-in');
       $('#mLabel').textContent = V[sel.view].l;
-      $('#mThumbs').innerHTML = V.map((v, k) => `<button data-vw="${k}" class="overflow-hidden rounded-lg border ${k === sel.view ? 'border-champ' : 'border-white/10'} transition hover:border-champ/60"><img src="${v.s}" onerror="imgFix(this)" alt="${v.l}" class="silv h-14 w-full object-cover" style="transform:${v.t}"></button>`).join('');
+      $('#mThumbs').innerHTML = V.map((v, k) => `<button data-vw="${k}" class="overflow-hidden rounded-lg border ${k === sel.view ? 'border-champ' : 'border-white/10'} transition-all duration-300 hover:border-champ/60"><img src="${v.s}" onerror="imgFix(this)" alt="${v.l}" class="silv h-14 w-full object-cover" style="transform:${v.t}"></button>`).join('');
       $('#mCat').textContent = 'Silver · ' + p.category;
       $('#mName').textContent = p.name;
       $('#mPrice').textContent = inr(p.price);
@@ -1278,15 +1278,15 @@
         const [id, size] = k.split('|');
         const p = PRODUCTS.find(x => x.id == id);
         return `
-        <div class="mb-4 flex gap-4 rounded-xl border border-white/5 bg-card p-3">
+        <div class="mb-4 flex gap-4 rounded-xl border border-white/5 bg-card/80 p-3 backdrop-blur-sm">
           <img src="${u(p.imgs[0], 400)}" onerror="imgFix(this)" alt="${p.name}" decoding="async" class="silv h-20 w-16 rounded-lg bg-pine object-cover">
           <div class="flex-1">
             <p class="font-display text-lg leading-tight text-ivory">${p.name}</p>
             <p class="text-xs text-champ">Size ${size} · ${inr(p.price)}</p>
             <div class="mt-2 flex items-center gap-3">
-              <button data-dec="${k}" class="h-7 w-7 rounded-full border border-white/15 text-ivory hover:border-champ hover:text-champ">−</button>
+              <button data-dec="${k}" class="h-7 w-7 rounded-full border border-white/15 text-ivory hover:border-champ hover:text-champ hover:bg-champ/10">−</button>
               <span class="text-[15px] text-ivory">${q}</span>
-              <button data-inc="${k}" class="h-7 w-7 rounded-full border border-white/15 text-ivory hover:border-champ hover:text-champ">+</button>
+              <button data-inc="${k}" class="h-7 w-7 rounded-full border border-white/15 text-ivory hover:border-champ hover:text-champ hover:bg-champ/10">+</button>
             </div>
           </div>
           <div class="flex flex-col items-end justify-between">
@@ -1406,7 +1406,7 @@
         pg.classList.add('page-anim');
       }
       if (mobileMenu) mobileMenu.classList.add('hidden');
-      document.body.classList.remove('overflow-hidden'); // Ensure scroll is unlocked
+      document.body.classList.remove('overflow-hidden');
       window.scrollTo({ top: 0, behavior: 'auto' });
       
       setTimeout(() => {
@@ -1420,7 +1420,6 @@
     
     addEventListener('hashchange', navigate);
     
-    // Initialize
     navigate();
     applyShop();
     renderCart();
